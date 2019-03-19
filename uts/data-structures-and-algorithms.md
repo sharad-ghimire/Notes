@@ -1,8 +1,4 @@
----
-title: Data Structure and Algorithms
----
-
-<div style="font-size: 20pt; border-bottom: 1px solid black; text-align:center;"> Lecture 1</div>
+## Lecture 1
 
 ### Basic Definations
 
@@ -273,4 +269,94 @@ int main(){
 # We will use C++17
 ```
 
-<div style="font-size: 20pt; border-bottom: 1px solid black; text-align:center;"> Lecture 2</div>
+## Lecture 2
+
+<small>intLinkedList.h</small> : Definition of what gonna be in the class `intLinkedList`.
+
+```cpp
+#ifndef INTLINKEDLIST_H_ //if not defined
+#define INTLINKEDLIST_H_ // define
+// # -> compiler directive
+
+#include <cstddef>
+#include <string>
+
+#include "intList.h"
+
+using std:size_t;
+using std:string;
+
+class intLinkedList : public intList { // interface
+  private:
+    class intNode {  //private inner class
+      private:
+        intNode * next;
+        int data;
+
+      public:
+        intNode(); //constructor
+        intNode(int Node * next, int data); // constructor
+        ~intNode(); // destructor (if we create something in heap we have to delete them)
+        int getData(); // accesor
+        intNode * getNext();
+        void setNext(intNode *); //mutator
+
+    }; // end of node class
+
+    intNode * head;
+    size_t length; // arent't objects but are types, underneth it is just a unsigned int (tells us regardless of what its name is, this variable is meant to indicate the size of whatever it is attached to, so, size_t is size type)
+
+  public:
+
+    intLinkedList();
+    ~intLinkedList();
+    bool isEmpty();
+    void prepend(int c);
+    void append(int c);
+    int getHead();
+    intLinkedList* tail(); // return type is a pointer to a linklist
+};
+
+#endif
+```
+
+<small>intList.h</small>: Interface in C++ (bunch of method name). Java uses dynamic light binding, so if we have got `a extend b {}` , then we create a variable of type b and instanciate with a, when we call the method `getHead()` on b, it will actually run the method defined in a. So, it will go to the buttom of hierarchy (inheritance tree) and grab that one. But, C++ will grab the one closest to the starting point. So, `virtual` keyword pushes that down. I.e dont use the one here but go get the one that is actually on the object we are talking about. `virtual int getHead() = 0;` what equals 0 does is that it can have no instantiation here. (In C++ we can do a virtual method that has a implementation).
+So, all those says that here is the methods which has to be implemented in the class it inherits from. (Same as java interfaces)
+
+```cpp
+#ifndef INTLIST_H_
+#define INTLIST_H_
+
+// a list is the thing that implements below things correctly
+class intList {
+  public:
+    // pure virtual function
+    virtual ~intList(){};  // must have a destructor
+    virtual bool isEmpty() = 0; //
+    virtual void prepend(int c) = 0;
+    virtual void append(int c) = 0;
+    virtual int getHead() = 0;
+    virtual intList * tail() = 0;
+}
+#endif
+```
+
+**Linked List**:
+
+![Linked List](./images/linked-list.png)
+
+```cpp
+#include "intLinkedList.h"
+
+intLinkedList::intNode::intNode() {}
+intLinkedList::intNode::intNode(intNode * n, int d){}
+
+intLinkedList::intNode::~intNode(){} //We dont have to do anything for this one
+
+int intLinkedList::intNode::getData(){}
+intLinkedList::intNode* intLinkedList::intNode::get(){}
+
+void intLinkedList::intNode::setNext(intNode * n){}
+
+intLinkedList::intLinkedList(){}
+```
