@@ -271,7 +271,7 @@ int main(){
 
 ## Lecture 2
 
-<small>intLinkedList.h</small> : Definition of what gonna be in the class `intLinkedList`.
+<small>intLinkedList.h</small> : Definition of what gonna be in the class `intLinkedList.cpp`.
 
 ```cpp
 #ifndef INTLINKEDLIST_H_ //if not defined
@@ -300,11 +300,12 @@ class intLinkedList : public intList { // interface
         int getData(); // accesor
         intNode * getNext();
         void setNext(intNode *); //mutator
-
     }; // end of node class
 
-    intNode * head;
-    size_t length; // arent't objects but are types, underneth it is just a unsigned int (tells us regardless of what its name is, this variable is meant to indicate the size of whatever it is attached to, so, size_t is size type)
+  intNode * head;
+  size_t length;
+  // arent't objects but are types, underneth it is just a unsigned int
+  //(tells us regardless of what its name is, this variable is meant to indicate the size of whatever it is attached to, so, size_t is size type)
 
   public:
 
@@ -343,7 +344,11 @@ class intList {
 
 **Linked List**:
 
-![Linked List](./images/linked-list.png)
+![Linked List](../images/linked-list.png)
+
+This is the source file of our header file (`intLinkedList.h`). All we do here is fill in the gaps.
+
+<small>intLinkedList.cpp</small>
 
 ```cpp
 #include "intLinkedList.h"
@@ -359,4 +364,103 @@ intLinkedList::intNode* intLinkedList::intNode::get(){}
 void intLinkedList::intNode::setNext(intNode * n){}
 
 intLinkedList::intLinkedList(){}
+intLinkedList::~intLinkedList(){}
+
+bool intLinkedList::isEmpty(){}
+
+void intLinkedList::prepend(int c){}
+void intLinkedList::append(int c){}
+int intLinkedList::getHead(){}
+intLinkedList * intLinkedList::tail(){}
 ```
+
+**Simple I/O** : C++ has a number of ways to handle basic text input and output. Standard `cin` and `cout`. These are the same idea as Java's `System.in` and `System.out`. But come with special operators: `>>` and `<<`. They are in `iostream` library. `cerr` also exists for errors.
+
+```cpp
+#include <iostream>
+#include <string>
+int main() {
+  std::string name;
+  std::cout<<"Enter your name: "<<std::endl;
+  std::cin>>name;
+  getLine(std::cin, name);
+  //cin stops at first whitespace so to get whole line use getLine()
+}
+```
+
+**File I/O**: Uses the same abstraction as cin and cout.
+
+- Use the library `fstream`.
+- Create an `ofstream` for writing.
+- Create an `ifstream` for reading.
+
+**Destructors** :
+
+- `~intLinkedList()` This is a destructor. This is a special method that's run when an object has the special `delete` operator called on it.
+  - Syntax: `delete [pointer to the thing to delete]`.
+  - For arrays `delete[] [array varaible]`
+  - `delete` is needed when we've created something with `new`. Otherwise, the heap memory is not deallocated, and we have a memory leak. To destroy our computer, create a loop that just allocate memory to an int or vector.
+
+**Exception** : C++ can throw exception, just like Java. C++ can throw anything. (Java has very strict object hierarcy and we can treat everything in Java as object. In C++ there is no single unified hierarcy for Exception). C++ does define a set of exceptions, defined in `<exception>`. Syntax: `try { //... } catch([Exception Type][parameter name]){ //... }`
+
+```cpp
+try {
+  int c;
+  std::cin >> c;
+  bool b = true;
+  throw b;
+} catch (int i) {
+  std::cout << i << std::endl;
+} catch (bool i) {
+  std::cout << b << std::endl;
+}
+```
+
+**Compling with multiple files** :
+
+```bash
+$ g++ -std="c++17" -o test ctest.cpp pointer.cpp
+```
+
+**Abstract Data Type**: ADT is a collection of behaviours.
+
+**Queues** : The (basic) Queue is the basic FIFO (first-in-first-out) data structure. It keeps things in order (like a list), but things can only be added to the back, and things can only be taken off the front. The most basic keep things in order and give me as they arrive data structure. Things like all the buffers in computer are implemented in queue become we have to do the processing in the order they arrive but we cannot handle them all at once so we have to do one at a time.
+
+<small>A Pure-ish Virtual class for a Queue of ints</small>
+
+```cpp
+class intQueue {
+  public:
+    virtual ~intQueue(){};
+    virtual void enqueue(int n) = 0; //add at the back
+    virtual int dequeue() = 0;  // take something off from front
+    virtual int peek() = 0;  // look at the front element
+};
+```
+
+![Queue](queue.png)
+
+Other types of Queue:
+
+- A Deque is a double-ended queue - we can add and remove at both ends. This is really important for implementing other data structures. (we cannot pull from out from the middle.)
+- A Priority Queue is queue, but elements are inserted with a priority, and come out in priority order. System Buffers works in this queue.
+
+**Stack**: A Stack is like a queue, but it's a last in first out (LIFO) data structure. Like a stack of things. Whatever we put in most recently is the first thing we remove. We can add to the "top", and remove from the "top".
+
+```cpp
+class intStack{
+  public:
+    virtual ~intStack(){};
+    virtual void push(int n) = 0; //add at the top
+    virtual int pop() = 0;  // take something off from top
+    virtual int peek() = 0;  // look at the front element
+};
+```
+
+- Stacks and Queues are two of the most used data structures that do something.
+- Buffers of all kinds are Queues (things go in and get processed in order eventually).
+- Stacks are built into the programming language we're using - they control how the program functions.
+- If we put every thing in stack and tell them all out, we get the same sequence but in the reverse order.
+- Queue correspond to Breadth first notion and Stack corespond to Depth first notion. Stack kind of go all the way down to the bottom and back up to the top, so we get things out in reverse order while the Queue preserves the order we put it in.
+
+![Stack](stack.png)
