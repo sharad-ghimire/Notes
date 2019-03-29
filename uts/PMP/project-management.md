@@ -263,3 +263,165 @@ _Is stakeholder engagementthe same as stakeholder management?_
     4. Prioritize the Communication Options: Some communication activities provide more value than others. You brainstormed lists of communication options. Now you need to prioritize the items to determine which provide the most value for the least cost. If a communication activity takes a lot of time and provides little or marginal communication value, it should be discarded. If a communication option takes little effort and provides a lot of value, it should be included in the final Communication Matrix. Of course, if a communication activity is mandatory, it should be included no matter what the cost. If a mandatory activity is time consuming, you may be able to negotiate with the stakeholders to find a less-intensive alternative.
 
 ### Module 3 - Ethical Foundations and Principles
+
+**IT as a Proffession** :
+
+> Experts in a field, which provides them an advantage over the lay person and that prefessional's work has the potential to impact the general public at large.
+
+**Professional Code of Ethics**
+
+1. Symbolized profession
+2. Protect group interest
+3. Detail membership etiquette
+4. Inspire good conduct
+5. Educate members
+6. Discipline members
+7. FOster external relations
+8. Detail principles
+9. Express ideals
+10. Put forth rules
+11. Offer guidelines
+12. Codify rights
+
+- Medicine : Hippocratic Oath - AMA
+- Law : The Bar - Australian Law Society ALS
+- Accountancy : Institute of Engineers Australia, IEA
+- Architecture : Royal Australia Institute of Architects
+- IT
+
+**Definitions**
+
+- Ethics: Beliefs regarding right and wrong behaviour. Involve moral, legal and social issues. The attempt to determine some general basis for choosing and judging moral actions.
+- Ethical behaviour : Behaviour that conforms to generally accepted social norms.
+- Ethical Influences : Parent, Family, Boss/Peers/Friends, Schools/Universities, Culture, TV/Media/Internet, Books/Newspaper/Magazines, Government/Law. Virtues and Vices. Value System.
+
+**Ethical Foundations** : Decision-making based on the values we hold.
+
+![How our decision auto pilot works](ethics.png)
+
+**Ethical Principles**
+
+| View                      | Description                                                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Deontology                | Right and wrong is dependent on meeting a duty and independent of consequences                                                      |
+| Consequentialism          | Right/wrong determined by comparative assessment of each act’s consequences (inc _Utilitarianism_ – greatest good, greatest number) |
+| Relativism                | There is no single ethical truth, everything is contingency-based (whatever a culture thinks is right or wrong for its member)      |
+| Universalism (absolutism) | There is a single thruth - implies a single perspective as to what is right and wrong                                               |
+| Virtue ethics             | Focuses on the person who acts - and character traits of the actor as expressed by their actions.                                   |
+| Justice ethics            | Duty to treat all parties faily and to distribute risks and benefits equitably (and following rules derived from these principles)  |
+| Ethical pluralism         | Society comprises diverse pressure groups with divergent social interests. Stakeholder conflict is normal/accepted.                 |
+
+Projects have consequences:
+
+- [The 73 second flight of Challenger](https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster).
+- [The lastflight of Iran Air 655](https://en.wikipedia.org/wiki/Iran_Air_Flight_655).
+- [The day Stanislav Petrov saved the world](https://en.wikipedia.org/wiki/Stanislav_Petrov).
+
+Ethical views are founded in individual belief, tend to be deeply held and do not change easily or frequently. An issue is notlikely to be an ethical issue if the individual views which define it are:
+
+- Primarily concerned with convenience
+- Founded on opinion, not beliefs
+- Casually modified or frequently changed
+
+**Common Ethical Concerns for PMs**
+
+- Deliberate underperformance
+- Seeking most lucrative solution (not one making most sense)
+- Phoney estimating (not willing to show reasoning)
+- Violating confidentiality
+- Misinformation, disinformation, falsification and misreporting
+- Never willing to stop or put a project on hold•Exaggerating expertise, overselling and low-balling
+- Personal interactions/benefits and/or conflicts-of-interest
+- Blended billing rates and financial reporting
+- Inappropriate mark-up on subcontractors
+- Using project management as a sales force
+
+A seven step approach to tackle ethical issues:
+
+1. Get the facts
+2. Identify the stakeholders and their position
+3. Consider the consequences of your decision
+4. Weigh-up various guidelines and principles
+5. Develop and evaluate options
+6. Review your decision
+7. Evaluate the results of your decision
+
+Some general rules of thumb to consider/apply:
+
+- The “Mum” Test
+- The Media Test
+- The Smell Test
+- The “Other Persons’ Shoes” Test
+- The Market TestEthical Principles
+
+Having an ethical framework helps provide answers to questions such as:
+
+- What should I (we) do?
+- What goals should I (we) pursue?
+- What laws should we have?
+- What collective behaviour should we pursue?
+
+**Ethics vs Law**
+
+- _Ethics_ in IT must consider how information systems and technology affect human choice, action and potential. Individual beliefs and values
+- _Law_ determines principles and regulations in a community set by some authority and enforced by judicial decision. Society rules for accepted behaviour
+- Ethical versus Legal: (These are not the same!)
+  - Legal and Ethical
+  - Ethical but Not Legal
+  - Legal but Not Ethical
+  - Not Ethical and Not Legal
+
+**Considerations for Information Use**
+
+| Ethical Issues            | Legal Issues           |
+| ------------------------- | ---------------------- |
+| Growth of knowledge       | Information ownership  |
+| Competition               | Monopolies             |
+| Personal privacy          | Data tracking / access |
+| Protecting the vulnerable | Harassment             |
+| Free speech               | Libel                  |
+| Openness                  | Espinoage              |
+| Fair dealing / fair use   | Copyright /patent / IP |
+| Equal opportunity         | Discrimination         |
+
+**Why might ethics be important?**
+
+- Growth in project complexity (more automation)
+- Capturing of vast amounts of data
+- Reliance on technology to reflect reality
+- Law lags behind technology evolution
+
+Decisions/actions we must consider
+
+- Harm minimisatio
+- Rights and duties
+  - Right to know
+  - Right to privacy
+  - Right to property
+  - Duty to meet obligations
+  - Duty to follow the law
+
+We will be put in ethical situations so we need to be able to analyse and decide on the issues.
+
+![Ethics](ethics2.png)
+
+**Summary**
+
+- One cannot be a Professional unless one has and maintains ethical principles in concordance with the societal and legal framework.
+- If one expects ethical behaviour from the other professions then one must maintain ethical behaviour in all IT systems that one is involved with.
+- Without ethics one cannot call oneself a Professional.
+- Your ethical stance will be tested many times in your career.
+
+[Interesting video lecture on ethics](https://www.youtube.com/watch?v=kBdfcR-8hEY)
+
+#### Questions and Answers
+
+1. What does it mean to be ethical?
+2. What is the purpose of an organisation having a professional code of conduct?
+3. Describe what it means to be ‘professional’;
+4. One potential ethical perspective is called deontology. Describe what is meant by this term and give a specific example to illustrate it.
+5. Why do you believe that people may have different ethical views?
+6. Give an example of an activity that may be ethical but not legal. Give an example of an activity that may be legal but not ethical.
+7. Describe and explain 2 common ethical concerns for project managers.
+8. Why is ethics an important issue for the information industry?
+9. When tackling an ethical issue (or determining an ethical position) what is the firstthing a person should do?
