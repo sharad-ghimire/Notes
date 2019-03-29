@@ -414,6 +414,8 @@ We will be put in ethical situations so we need to be able to analyse and decide
 
 [Interesting video lecture on ethics](https://www.youtube.com/watch?v=kBdfcR-8hEY)
 
+[Space Shuttle Challenger](http://www.youtube.com/watch?v=mG8BPB_oPlg)
+
 #### Questions and Answers
 
 1. What does it mean to be ethical?
