@@ -471,19 +471,21 @@ class intStack{
 
 - Arrays in C/C++ are difficult. Lists provide an alternative to this, but Lists usually don't guarantees about how the memory is managed. Lists also often come with more overhead. So, `vectors` are the middle ground.
 - If we don't care what's inside, we can think of vectors as dynamically size arrays.
+- Vector class is wrapping an array or series of arrays, and via operator like `data` and `operator[]` we can access them and is doing all the memory management itself.
+-
 
 ```cpp
 #include <iostream>
 #include <vector>
 
 int main(){
-  std::vector<int> v;
+  std::vector<int> v; // templates
   for(int i = 0; i < 10 i++) v.push_back(i); // add to that vector at end
   for(int i = 0; i < v.size(); i++) std::cout << v[i] << std::endl;
 
   for(int i = 0; v.size(); ++i) v[i] += 5;
   for(int i = 0; i < v.size(); i++) std::cout << v[i] << std::endl;
-} 
+}
 ```
 
 **Templates**
@@ -493,8 +495,17 @@ int main(){
 - So we can easily make vectors that hold different types without rewriting the code.
 - They’re fairly simple to work with, but provide lots of placesto leave something out (and cause weird compile errors).
 
-```cpp
+In Java
 
+```java
+import java.util.ArrayList;
+public class Test {
+  public static void main(String[] args){
+    ArrayList<Integer> v = new ArrayList<>(); // we can only put object type in here
+    ArrayList<int> v = new ArrayList<>(); // and cannot do primitive types
+
+  }
+}
 ```
 
 **Iterators**
@@ -505,8 +516,7 @@ int main(){
 - Also, the inheritance structures are not as well defined, so using them is a little more cumbersome.
 
 ```cpp
-
-
+virtual intList * tail() = 0; // tail is every thing but the first element
 ```
 
 **Algorithmic Analysis**
@@ -528,14 +538,13 @@ $$
   \exists \; c \in \mathbb{Q}, N \in \mathbb{N} \;\text{such that} \; \forall n \geq N, \; \text{ we have } \; f(n) \leq c \; . \;g(n)
 $$
 
-- $f(n) = n, g(n) = 2n^2 \to f \in O(g) $
+- $ f(n) = n, g(n) = 2n^2 \to f \in O(g) $
 - $ f(n) = n, g(n) = n^2 \to f \in O(g)$
 - $ f(n) = n^2, g(n) = n \to f \notin O(g) \; (but \; g \in o(f))$
 - $ f(n) = 50n, g(n) = n \to f \in O(g) \; (and \; g \in O(f))  $
 - $f(n) = logn, \; g(n) =n\ to f \in O(g)$
 - $  f(n) = n,\; g(n) = 2n \to f \in O(g)$
-- $ f(n) = 23n^3, g(n) = 13n^4 \to  f \in O(g).
- $
+- $ f(n) = 23n^3, g(n) = 13n^4 \to  f \in O(g).$
 
 Proving these relationships
 
