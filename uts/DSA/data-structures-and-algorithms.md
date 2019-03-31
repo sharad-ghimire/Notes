@@ -464,3 +464,160 @@ class intStack{
 - Queue correspond to Breadth first notion and Stack corespond to Depth first notion. Stack kind of go all the way down to the bottom and back up to the top, so we get things out in reverse order while the Queue preserves the order we put it in.
 
 ![Stack](stack.png)
+
+## Lecture 3 - Vectors, Templates and Big-Oh
+
+**The `vector` class**
+
+- Arrays in C/C++ are difficult. Lists provide an alternative to this, but Lists usually don't guarantees about how the memory is managed. Lists also often come with more overhead. So, `vectors` are the middle ground.
+- If we don't care what's inside, we can think of vectors as dynamically size arrays.
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main(){
+  std::vector<int> v;
+  for(int i = 0; i < 10 i++) v.push_back(i); // add to that vector at end
+  for(int i = 0; i < v.size(); i++) std::cout << v[i] << std::endl;
+
+  for(int i = 0; v.size(); ++i) v[i] += 5;
+  for(int i = 0; i < v.size(); i++) std::cout << v[i] << std::endl;
+} 
+```
+
+**Templates**
+
+- Things with angle brackets (`< >`)? Same as generics in Java.
+- Templates provide a way to write certain types of code once: If the code doesnot care about the types it's working with.
+- So we can easily make vectors that hold different types without rewriting the code.
+- They’re fairly simple to work with, but provide lots of placesto leave something out (and cause weird compile errors).
+
+```cpp
+
+```
+
+**Iterators**
+
+- That `tail()` function in Linked List? Its really annoying way to access the list right? What we would like is a simple way to get the next element,that’s still compatible with information hiding. Iterators are the answer to this problem.
+- Iterators in Java are fairly well put together. In particular, the inheritance structure is well thought out. A little wordy, but simple.
+- As we might expect, in C++ they’re a lot more flexible, but we pay for this with some ugly code.
+- Also, the inheritance structures are not as well defined, so using them is a little more cumbersome.
+
+```cpp
+
+
+```
+
+**Algorithmic Analysis**
+
+- How do we reliably compare algorithms?
+  - Testing gives good information, but is limited to the cases youtest.
+  - How much of that information comes from the choice of computer, programming languages, test data?
+- We need a way of comparing the abstract algorithms themselves.
+- If we have two algorithms that solve the same problem, what things are we interested in?
+  - How long they take.
+  - How much space they take up.
+- How do we know what resources an algorithm will use for any of the infinite number of inputs?
+
+If we have two functions $f$ and $g$, we have ways of comparing them:
+
+We say $f \in O(g)$ (" f is in big-oh of g") if:
+
+$$
+  \exists \; c \in \mathbb{Q}, N \in \mathbb{N} \;\text{such that} \; \forall n \geq N, \; \text{ we have } \; f(n) \leq c \; . \;g(n)
+$$
+
+- $f(n) = n, g(n) = 2n^2 \to f \in O(g) $
+- $ f(n) = n, g(n) = n^2 \to f \in O(g)$
+- $ f(n) = n^2, g(n) = n \to f \notin O(g) \; (but \; g \in o(f))$
+- $ f(n) = 50n, g(n) = n \to f \in O(g) \; (and \; g \in O(f))  $
+- $f(n) = logn, \; g(n) =n\ to f \in O(g)$
+- $  f(n) = n,\; g(n) = 2n \to f \in O(g)$
+- $ f(n) = 23n^3, g(n) = 13n^4 \to  f \in O(g).
+ $
+
+Proving these relationships
+
+- These can all be proved using a variety of techniques:
+  - Induction
+  - Algebraically
+  - Limit based definitions
+- A couple of handy rules:
+  - $ c.n^k \in O(n^{k+1}) \; \text{for any c and k}$
+  - $log n \in O(n)$
+  - $f(n) + g(n) + h(n) + \dots \in O(max \left \{ f(n), g(n), h(n), \dots \right \} ).$
+  - We can always ignore constant multipliers (i.e we can treat $c.f(n) as f(n)$)
+
+**Limits**:
+
+$$
+\text{If} \; \; \;  \lim_{x \to \infty} \frac{f(n)}{g(n)} < \infty
+$$
+
+then $f \in O(g)$ (where $< \infty $ means any constant or $-\infty$).
+
+**Some names**
+
+- $n$ is linear
+- $n^2$ is quadratic
+- $n^3$ is cubic
+- $n^k$ for any $k$ is ploynomial
+- $logn$ is logrithmic
+- $(logn)^k$ for any $k$ is poly logarithmic.
+- $k^n$ for any $c$ is exponential.
+
+Back to the two algorithms $A$ and $B$:
+
+- If we can work out functions that describe the running time, we can now compare them and decide whicch is the fastest (in long run).
+- Let $n$ br the size of the input.
+- If the running time of $A$ is $T_{A}(n) = n^2$ and the running time of $b$ is $T_{B}(n)\dots$
+- we can work out that $T_B \in O(T_A),$ so $B$ must be the faster algorithm asymptotically.
+- (Because $A$'s running time is always larger for large enough inputs.)
+- How do we get theses functions then?
+- In an abstract sense, running time is really the number of steps the algorithm takes for a given input size. This abstracts out programming languages and computers.
+- So all we need to do is count the number of steps.
+
+**A Simple Example**
+
+```basic
+begin
+  a = 1
+  b = 2
+  c = a + b
+
+  print c
+
+end
+```
+
+This code does the same thing for any input (it does not really take any), so $T(n) = 4$ (ish).
+
+```cpp
+void printArray(int a[], size n){
+  for(int i = 0; i < n; i++){
+    cout << a[i];
+  }
+}
+```
+
+At each iteration we do a check to see if `i` is large wnough to stop, print something out, and add one to `i`. We also initialise `i` once. Assuming printing is one step. $T(n) = 1 + 3n \in O(n)$
+
+```java
+for(int i = 0; i < n; i++){
+  for(int j = 0; j < n; j++){
+    System.out.println(i + " " + j);
+  }
+}
+```
+
+For each iteration of the outer loop, we have $n$ iterations of the inner loop. For each iteration of the inner loop, we do one thing. So, if the outer loop runs $n$ times: $T(n) = n.n.1 = n^2 \in O(n^2)$.
+
+**Some other properties and notations**
+
+- $O(.)$ is transitive, so if $f \in O(g)$ and $g \in O(h)$, then $f\in O(h)$.
+- If $f \in O(g)$ and $g \in O(f)$, we write $f \in \Theta(g)$ (and $g \in \Theta (f))$ - this is an equivalence relation.
+- If $f \in O(g)$ then $g \in \Omega(f). \Omega(.)$ is defined the same way as $O(.)$, but with $\geq$ , rathr than $\leq$.
+- If $f \in O(g)$ anf $f \in \Omega(g)$, then $f \in \Theta(g)$.
+- $o$ replaces $O$ if we use $<$ instead of $\leq$ in the definition.
+- $w$ replaces $\Omega$ if we use $>$ instead of $\geq$ in its definition.
