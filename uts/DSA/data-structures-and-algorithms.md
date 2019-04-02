@@ -333,11 +333,12 @@ class intList {
   public:
     // pure virtual function
     virtual ~intList(){};  // must have a destructor
-    virtual bool isEmpty() = 0; //
+    virtual bool isEmpty() = 0;
     virtual void prepend(int c) = 0;
     virtual void append(int c) = 0;
     virtual int getHead() = 0;
     virtual intList * tail() = 0;
+    // = 0 is way of saying that this method does not have a implementation in this class and it has to be implemented in some child class
 }
 #endif
 ```
@@ -503,6 +504,9 @@ public class Test {
   public static void main(String[] args){
     ArrayList<Integer> v = new ArrayList<>(); // we can only put object type in here
     ArrayList<int> v = new ArrayList<>(); // and cannot do primitive types
+    for(int i : v ){
+      // 
+    }
 
   }
 }
@@ -511,18 +515,19 @@ public class Test {
 **Iterators**
 
 - That `tail()` function in Linked List? Its really annoying way to access the list right? What we would like is a simple way to get the next element,that’s still compatible with information hiding. Iterators are the answer to this problem.
+- One geric way of dealing with moving across a data structures.
 - Iterators in Java are fairly well put together. In particular, the inheritance structure is well thought out. A little wordy, but simple.
 - As we might expect, in C++ they’re a lot more flexible, but we pay for this with some ugly code.
 - Also, the inheritance structures are not as well defined, so using them is a little more cumbersome.
 
 ```cpp
-virtual intList * tail() = 0; // tail is every thing but the first element
+
 ```
 
 **Algorithmic Analysis**
 
 - How do we reliably compare algorithms?
-  - Testing gives good information, but is limited to the cases youtest.
+  - Testing gives good information, but is limited to the cases we test.
   - How much of that information comes from the choice of computer, programming languages, test data?
 - We need a way of comparing the abstract algorithms themselves.
 - If we have two algorithms that solve the same problem, what things are we interested in?
@@ -626,7 +631,8 @@ For each iteration of the outer loop, we have $n$ iterations of the inner loop. 
 
 - $O(.)$ is transitive, so if $f \in O(g)$ and $g \in O(h)$, then $f\in O(h)$.
 - If $f \in O(g)$ and $g \in O(f)$, we write $f \in \Theta(g)$ (and $g \in \Theta (f))$ - this is an equivalence relation.
-- If $f \in O(g)$ then $g \in \Omega(f). \Omega(.)$ is defined the same way as $O(.)$, but with $\geq$ , rathr than $\leq$.
+- If $f \in O(g)$ then $g \in \Omega(f). \Omega(.)$ is defined the same way as $O(.)$, but with $\geq$ , rather than $\leq$.
 - If $f \in O(g)$ anf $f \in \Omega(g)$, then $f \in \Theta(g)$.
 - $o$ replaces $O$ if we use $<$ instead of $\leq$ in the definition.
 - $w$ replaces $\Omega$ if we use $>$ instead of $\geq$ in its definition.
+
