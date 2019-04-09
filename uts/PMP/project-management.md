@@ -2,15 +2,15 @@
 
 ## Week 1
 
-### Module 1 - Introduction
+#### Module 1 - Introduction
 
-- A Project is a temporary endeavor undertaken to accomplish a unique purpose.
-- Project Management is the application of knowledge, skills, tools, and techniques to project activities in order to meet project requirement.
-- Why Project Management? Without cureful planning sometimes things just go wrong.
+A Project is a temporary endeavour undertaken to accomplish a unique purpose. Project Management is the application of knowledge, skills, tools, and techniques to project activities in order to meet project requirement.
 
-  - Australian Parliament House \$220m to 1100m; 5 months late
-  - Sydney Opera House$7m to $103m, 10 years late
-  - NSW GovtTcard$35m to $100m; 10 years late, cancel
+Why Project Management? Without careful planning sometimes things just go wrong.
+
+- Australian Parliament House \$220m to 1100m; 5 months late
+- Sydney Opera House $7m\;to ​$ 103m, 10 years late
+- NSW GovtTcard$35m to $100m; 10 years late, cancel
 
 **Are project management success and project success the same things?**
 
@@ -21,11 +21,11 @@ No! Projects can be a technical success and still be an organisational failure (
 
 ## Week 2
 
-## Running a Workshop
+#### Running a Workshop
 
-1. Why? : Industry Processes - common. A neccessary skill for a PM or analyst.Help in understanding stages of a Project. Peer Learning. Demonstrates power of collaborative work. Practice PM techniques
+1. Why? : Industry Processes - common. A necessary skill for a PM or analyst. Help in understanding stages of a Project. Peer Learning. Demonstrates power of collaborative work. Practice PM techniques
 
-2. What? : Elicit requirements from a group of people with different viewpoints and agendas. Friendly, creative, non conforntational method of getting a diverse group of people to work towards an outcome and agree with said outcome. Outcome is a written document.
+2. What? : Elicit requirements from a group of people with different viewpoints and agendas. Friendly, creative, non confrontational method of getting a diverse group of people to work towards an outcome and agree with said outcome. Outcome is a written document.
 
 3. Who?
 
@@ -46,9 +46,9 @@ No! Projects can be a technical success and still be an organisational failure (
 
 6. Deliverables: Output is normally a document. Details discussion ideas, outcomes and agreements. Posted for circulation, comment and use. Can be used as input for later workshops.
 
-### Module 2 - Projects, Concepts and Stakeholders
+#### Module 2 - Projects, Concepts and Stakeholders
 
-**Why Project Management?** : Successful project management means meeting all three goals (scope, time and cost) and staisfying the project's sponser.
+**Why Project Management?** : Successful project management means meeting all three goals (scope, time and cost) and satisfying the project's sponsor.
 
 1. Strategic Alignmnet: Project management is important because it ensures what is being delivered, is right, and will deliver real value against the business opportunity.
 2. Leadership: Project management is important because it brings leadership and direction to projects.
@@ -80,18 +80,29 @@ No! Projects can be a technical success and still be an organisational failure (
 **Top Ten Factors of Project Success**
 
 1. Executive Management Support
+
 2. Emotional Maturity
+
 3. User Involvement
+
 4. Optimisation (scope vs business value)
+
 5. Skilled Resources
+
 6. Standard Architecture
+
 7. Agile Process
+
 8. Modest Execution
+
 9. Project Management Expertise
+
 10. Clear Business Objectives
 
+    
+
 **Project Life Cycle** : Project Management can be classified into five groups of processes.
-![Five Process Group](project-cycle.png)
+![Five Process Group](../images/project-cycle.png)
 
 1. Initiating: This is all about getting the project commitment to start a project.
 
@@ -100,13 +111,11 @@ No! Projects can be a technical success and still be an organisational failure (
    - Estimate the cost.
    - Plan resources.
    - Identify project stakeholders.
-
 2. Planning: This is where we figure out the project. When the plan is complete, its time to launch the project.
 
    - What are we going to do?
    - How are we going to do it?
    - How will we know when we're done?
-
 3. Executing: There is where launch of the project happens.
 
    - Launch the project.
@@ -114,12 +123,10 @@ No! Projects can be a technical success and still be an organisational failure (
    - Develop and manage project team.
    - Explain project guidelines.
    - Executes the plan.
-
 4. Monitoring and Controlling: Whether the project is going according to plan, and if it isn't, we work out ways to get it back on track.
 
    - Report performance.
    - Control schedule.
-
 5. Closing: Here, we get the client to officially accept that the project is complete.
 
    - Ensure project acceptance.
@@ -146,21 +153,22 @@ Individuals, groups or organizations with a stake/claim in project's outcome. No
    - Identify an objective for each stakeholder
    - Identify strategies for each stakeholder
    - Decide communication needs for each stakeholder
+
 2. Stakeholder Analysis Cart: Used for identification, assessment and high level management of involved parties.
+
    | Stakeholder | Interest | Influence | Role | Objective | Strategy |
-   | ----------- | -------- | --------- | ---- | --------- | -------- |
+   | ----------- | -------- | --------- | ---- | --------- | :------: |
+   |             |          |           |      |           |          |
 
-3. Stakeholder Prioritisation: _The power/interest grid_
+3. Stakeholder Prioritisation: The power/interest grid
 
-   <div style="text-align:center;">
 
    ![The Power Interest Grid](power-interest.png)
 
-   </div>
 
 #### Communication Management
 
-A key skill for the PMs. A priority for both the PM and the team. Nobody likes surprises in project. PMs must identify problems, challenges and issues early and communicate this along with the alternatives to overcome the problems, challenges and issues. Stakeholders need to know _Communication Management A lack of communication willlead to incorrect assumptions!_.
+A key skill for the PMs. A priority for both the PM and the team. Nobody likes surprises in project. PMs must identify problems, challenges and issues early and communicate this along with the alternatives to overcome the problems, challenges and issues. Stakeholders need to know _Communication Management A lack of communication will lead to incorrect assumptions!_.
 
 **Communication Planning**
 
@@ -178,11 +186,11 @@ So detailed stakeholder analysis is prerequisite to good communications planning
 
 | Receiving Stakeholder | Report Required       | Time Due         | Producer Name   | Delivery Format   |
 | --------------------- | --------------------- | ---------------- | --------------- | ----------------- |
-| Steering Commitee     | Weekly status report  | Wednesday 9am    | G.Mooney (PM)   | Hardcopy, meeting |
+| Steering Committee    | Weekly status report  | Wednesday 9am    | G.Mooney (PM)   | Hardcopy, meeting |
 | Sponsor               | Monthly status report | 1st of month 2pm | G.Mooney (PM)   | Hardcopy, meeting |
 | Project Team          | Weekly status report  | Tuesdays 9am     | J.Smith (Admin) | Stand-up meeting  |
 
-_Is stakeholder engagementthe same as stakeholder management?_
+_Is stakeholder engagement the same as stakeholder management?_
 
 - Engagement seeks to build rapport/understanding between stakeholders as a basis for common decision making (= relationship);
 - Managementseeks to establish specificdeliverables and expectations then actively plans/executes towards those outcomes (= realisation)
@@ -262,9 +270,9 @@ _Is stakeholder engagementthe same as stakeholder management?_
     3. Determine the Effort Required : Determine how much effort is required for each of the communication ideas surfaced previously. Some of the activities might be relatively easy to perform. Others will require more effort. If the communication is ongoing, estimate the effort over a one-month period. For instance, a status report might only take one hour to create, but might be needed twice a month. The total effort would be two hours.
     4. Prioritize the Communication Options: Some communication activities provide more value than others. You brainstormed lists of communication options. Now you need to prioritize the items to determine which provide the most value for the least cost. If a communication activity takes a lot of time and provides little or marginal communication value, it should be discarded. If a communication option takes little effort and provides a lot of value, it should be included in the final Communication Matrix. Of course, if a communication activity is mandatory, it should be included no matter what the cost. If a mandatory activity is time consuming, you may be able to negotiate with the stakeholders to find a less-intensive alternative.
 
-### Module 3 - Ethical Foundations and Principles
+#### Module 3 - Ethical Foundations and Principles
 
-**IT as a Proffession** :
+**IT as a Professions** :
 
 > Experts in a field, which provides them an advantage over the lay person and that prefessional's work has the potential to impact the general public at large.
 
@@ -427,3 +435,406 @@ We will be put in ethical situations so we need to be able to analyse and decide
 7. Describe and explain 2 common ethical concerns for project managers.
 8. Why is ethics an important issue for the information industry?
 9. When tackling an ethical issue (or determining an ethical position) what is the firstthing a person should do?
+
+## Week 3
+
+#### Module 04 Project Initiation and Scope Management
+
+**Typical Corporate Investment Profile**
+
+![1554758066414](C:\Home\notes\uts\PMP\project-management.assets\1554758066414.png)
+
+**Project Lifecycle** : Logical phases that map the life of a project start  to end. 
+
+- Each phase has one or more tangible deliverables.
+
+- *Stage gates* (decision points) at end of each phase to evaluate performance, correct problems or cancel the project.
+
+  ![download (C:\Home\notes\uts\PMP\project-management.assets\download (7).png)](C:\Users\Sharad Ghimire\3D Objects\download (7).png)
+
+**Project Investment**: A Four Step Hierarchy:
+
+1. Strategic Planning : Understand organizational goals and objectives.
+   - Establish vision and mission
+   - Establish goals in line with vision and mission
+   - Craft strategies
+   - Develop action plans for each strategy
+   - Develop Roadmap (to achieve the above)
+2. Business Area Analysis : Analyse business processes for achieving goals
+   - Create baseline of how things work now ('As is')
+   - Create picture of how things should work in future ('To be')
+   - Make proposed changes visible to stakeholders and generate ownership of process.
+3. Project Identification: Define list of suitable projects supporting (1) and (2). What us each project about? Ask the questions below:  (Inception Deck) But remember: Actions speak louder than words. Observed behaviour carries more weight than what is told to us. 
+   - What is the purpose of the system?
+   - What is its core functionality? 
+   - What functionality is out-of-scope?
+   - What does success look like?
+   - Can you assemble a team with the necessary skills.
+   - How much money is available to fund the project?
+   - Who's the customer?
+4. Project Selection: Project selection, prioritisation, resource allocation.
+   - Selection Approaches $\to$ Measurable Organization Value (MOV)
+   - Project financial analysis (NPV, ROI, break-even, payback period...)
+   - Align to competitive strategy (gain/defend market share, overtake rivals, ...)
+   - Weighted scoring method (rating system based upon internal criteria)
+   - Balanced scorecard (business drives as metrics)
+   - Specific problem/opportunity (exit undesirable situation; make improvement)
+   - Project timeframe/urgency (some projects are absolutely time-bound)
+
+**Why do PM need to know MOV?**
+
+- Finance is the language of business: PMs need to use the language to take seriously. Most senior managers have a finance background. $50\%$ of capital assets over $500m are financed on project basis.
+
+- Understand the big picture: Numbers are the key to the strategic view. Measures of project success.
+
+- Spot executive agendas/assumptions: Be prepared to challenge not just accept. Don't let finance people control decision making. Ask intelligent financial questions (and use the answers)
+
+- Projects are about measurable business values!
+
+  ![download (C:\Home\notes\uts\PMP\project-management.assets\download (6).png)](C:\Users\Sharad Ghimire\3D Objects\download (6).png)
+
+  ##### Project Initiation
+
+  Three Documents Needed to Initiate a Project
+
+  1. Business Case (includes Feasibility Study): Justification of investment
+     - Context and background
+     - Business objective
+     - Current problem / opportunity statement
+     - Business assumptions and constraints
+     - Analysis of options and recommendation
+     - Preliminary project requirements
+     - Budget estimate (financial analysis)
+     - Schedule estimate
+     - Risks estimate
+  2. Project Charter : Project recognition / governance
+     - Project title
+     - Project start and end dates
+     - Schedule information
+     - Budget information 
+     - Ownership (PM)
+     - Project objectives
+     - Methodology and strategy : Control, quality, change, communications, risk, budget, training, etc.
+     - Roles and responsibilities of key stakeholders
+     - Schedule estimate (with milestones)
+     - Sign-off
+  3. Scope Statement: Baseline common understanding
+     - Project name
+     - Project characteristics
+     - Project assumptions
+     - Specific requirements
+     - Deliverables (project management and product)
+     - Success Criteria 
+     - (May also have some key milestone tied to success criteria)
+
+  
+
+  ##### Scope Management
+
+  > Failure to define what is part of the project, as well as what is not, may result in work being performed that was unnecessary to create the product of the project and thus lead to oth schedule and budget overruns.
+  >
+  > ​							- Olde Curmudgeon, 1994 (PM Network Magazine) 
+
+  Defining and controlling : What is in the project? and What is not in the project?
+
+  5 main processes:
+
+  | Process                 | Deliverable                                              |
+  | ----------------------- | -------------------------------------------------------- |
+  | 1. Collect requirements | Requirements traceability matrix                         |
+  | 2. Define scope         | Scope statement (and other docs updates)                 |
+  | 3. Create WBS           | Scope baseline and Work Breakdown Structure              |
+  | 4. Verify scope         | Accepted (signed) scope deliverables and change requests |
+  | 5. Control scope        | Change requests, work measures, project management plan  |
+
+  1. **Collect stakeholder requirements**		
+
+     - Identify, assess and prioritise involved parties and needs
+
+     - Interviews, workshops, focus groups, observation to create requirements traceability matrix
+
+       ​						*Stakeholder Matrix*
+
+       | Stakeholder   | Interest              | Influence | Role               | Objective                 | Strategy                        |
+       | ------------- | --------------------- | --------- | ------------------ | ------------------------- | ------------------------------- |
+       | Sales Manager | Maximise ticket sales | High      | Steering Committee | Event Profit over $100000 | Involve in online ticket system |
+
+       ​								$\downarrow$
+
+       ​						*Traceability Matrix*
+
+       | Req No. |       Name       | Category | Source                              | Status                        |
+       | ------- | :--------------: | -------- | ----------------------------------- | ----------------------------- |
+       | R12     | Online Ticketing | Software | Project Charter and Scope Statement | Complete. Basic system tested |
+
+       
+
+  2. Define Scope (and management processes)
+
+     - Determine/agree work to be done and not done
+
+     - Scope statement (update/extend)
+
+     - Success measures to be used
+
+     - Compliance with corporate polices and standards 
+
+     - Task List
+
+     - Process for controlling change requests (scope creep)
+
+       Project Scoping: [Pentagon Wars - Bradley Fighting Vehicle Evolution](https://www.youtube.com/watch?v=aXQ2lO3ieBA)
+       Project Specs: [Pentagon Wars - Sheep Specs](https://www.youtube.com/watch?v=4f2XbOY9kcg)
+
+  3. Create WBS (to understand a project we need to understand every task done to accomplish it)
+
+     - Task decomposition is the basis for project planning
+
+     - Breaking into smaller and smaller tasks until we understand what all tasks are and how to do them.
+
+     - Focus on 'what' not 'when'
+
+     - Output is work breakdown structure (WBS)
+
+       It can be quite difficult to create a good WBS
+
+     ![1554767324597](C:\Home\notes\uts\PMP\project-management.assets\1554767324597.png)
+
+  Developing a Work Breakdown Structure
+
+  - Use specified guideline (i.e. government contracts)
+  - Analogies (copying from similar past projects)
+  - Top-down (start with largest and break into smaller)
+  - Bottom-up (aggregate known specific  tasks into larger summary activities)
+  - Mind mapping (branching out from a core idea then grouping the tasks)
+  - Watch: [Creating a WBS](https://www.youtube.com/watch?v=jZoHMi-RuUE)
+
+  
+
+  A Few Key Thoughts:
+
+  - Project investment is about measurable organisation value
+  - Projects (especially software projects) are non routine and therefore uncertain and risky
+  - Project objectives provide focus for all
+  - Make sure you involve and understand stakeholders
+  - Politics will change over the course of the project
+  - Scope controls what's in and what's out!
+  - Document major decisions (especially ones needing signoff)
+  - You can only trade off Scope vs Time vs Cost vs Quality
+  - Plan, plan well and keep on planning (iteratively)
+
+  ### Questions and Answers
+
+  1. Describe the benefit of using stage gates.
+  2. In the 4 step hierarchy for project investment 'strategic planning' is the first step. Explain why this needs to come before the others.
+  3. In business process analysis explain the value of an 'as-is' model.
+  4. Explain the purpose of an inception deck.
+  5. One of the ways to assess proposed projects is to undertake a project financial analysis. Explain one of acceptable techniques for such analysis.
+  6. Why would an organisation examine 'project payback period' for a project.
+  7. Explain why it is important for a project manager to understand MOV and the financial reasoning behind it.
+  8. Briefly describe the 3 documents required to initiate a project.
+  9. Explain why having a Requirements Traceability Matrix is useful.
+  10. Explain what is meant by ‘task decomposition’ in regard to projects.
+
+  ## Week 4
+
+#### Module 05 - Project Approaches and System Development Methods
+
+**Methodology**:  A system of methods used in a particular area of study or activity. The underlying principles and rules of organization of a philosophical system or inquiry procedure.
+
+**Software Development Methodologies**: Best practice evolves over time. Methodologies reflect priorities of their practitioners.
+
+- Nail down spec, and execute on it
+- Maximize use of a limited budget
+- Minimize risk by learning and experimenting early
+- Maximize long-term productivity of teams
+- Deliver continuous innovation
+
+So, there is no universally-applicable methodology.
+
+
+
+**Types of Software Systems**
+
+1. Monolithic: Ships as one large application
+2. Modular: Ship as multiple microservices. Encapsulation and separation of concerns. Easier to organize teams around. Easier to troubleshoot and maintain. Easier to adapt and scale.
+3. Self-hosted: Less communication overhead. Support of specialist hardware. Simpler security. Legislation issues. 
+4. Cloud: Cheaper, easier to maintain, Easier to update, Easier to scale, More robust and reliable, Great tools and support.
+5. Hand-crafted: Better fit for business operations, Better fit for existing IS system, Easier to adopt and learn. Custom UI, off-the self backend? Off the shelf system, but generate custom reports?
+   - Go open source where we can (but pay attention to project health and license)
+   - Build small prototypes to test and compare libraries
+   - Learn the tools that make adoption easy: Maven, Gradle, Node, Webpack
+6. Off-the shelf
+
+##### Predictive Approaches to Software Development 
+
+**The Waterfall Approach**
+
+Progress linearly through steps. Each steps has a clear handover process. Only go backwards to address flaws.
+
+![1554778356518](C:\Home\notes\uts\PMP\project-management.assets\1554778356518.png)
+
+1. Requirements: Documents describing what and who for. (Requirements Analyst, System Analyst, Systems Architect, etc)
+2. Design: Document describing how (same above)
+3. Implementation: Source Code (Software Engineer, Programmer)
+4. Testing : QA test scripts and results (QA Analyst)
+5. Deployment: Integration and Training (System admin, Network admin, Database Admin, etc)
+6. Maintenance: On going support
+
+Pros:
+
+- It is far cheaper to fix issues early, prior to implementation.
+- Establishes a clear contract of what will be delivered, early on.
+- Encourages strong documentation for knowledge transfer.
+- Consistency of documentation and milestones across projects.
+
+Cons:
+
+- Requirements change
+- Clients often don’t know what they want until they see it
+- Encourages silos of expertise
+- Encourages a “throw it over the wall” approach\
+- Programmers have little autonomy
+- Star developers become MS Word experts
+
+##### Adaptive Approaches to Software Development:
+
+**The agile approach**
+
+> Individuals and interactions over processes and tools
+> Working software over comprehensive documentation
+> Customer collaboration over contract negotiation
+> Responding to change over following a plan
+>
+> That is, while there is value in the items on
+> the right, we value the items on the left more
+
+**12 Principles of Agile**
+
+1. Customer satisfaction by rapid delivery of useful software
+2. Welcome changing requirements, even late in development
+3. Working software is delivered frequently (weeks rather than months)
+4. Working software is the principal measure of progress.
+5. Sustainable development, able to maintain a constant pace
+6. Close, daily co-operation between business people and developers
+7. Face-to-face is the best form of communication (= co-location)
+8. Projects are built around motivated individuals, who should be trusted
+9. Continuous attention to technical excellence and good design
+10. Simplicity
+11. Self-organising teams
+12. Regular adaptation to changing circumstances  
+
+Each iteration is short (~4 weeks), is cross-disciplinary, involving analysts, domain specialists, UX experts, programmers, etc. Involves close collaboration with clients. Delivers working software.
+
+1. SCRUM
+
+   Roles:
+
+   - Product Owner acts as key advocate for client, to maximize value of work done by team. Manages product backlog.
+   - Scrum Master acts as key facilitator of team, ensures. Facilities scrum events (e.g. meetings, stand ups). Manages tracking of sprint and tasks
+   - Development Team takes an active role in scoping sprints, tracking progress, etc. Self organizing and autonomous.
+
+   Tools: (Atlassian JIRA)
+
+   - Ticket Manager
+   - Story Manager
+   - Kanban boards
+   - Burndown charts
+
+2. Kanban: 
+
+   - Even more lightweight than SCRUM
+   - No sprints or timeboxing
+   - Time limits on how many items in any one cell
+
+3. XP
+
+   - Extreme Programming
+   - If short sprints are good, shorter sprints are better.
+   - If agile is good, being agile within a sprint is better.
+   - If code-review is good, pair coding is better.
+   - If tests are good, test-driven development is better.
+   - If customer feedback is good, having a customer on - site is better.
+   - Do the simplest thing first, always.
+
+4. Lean
+
+Pros
+
+- Great tools and support
+- Less up-front work
+- More frequent feedback with client
+- More opportunities to course-correct
+- Better culture for coders
+- More focus on software as the key deliverable.
+
+Cons
+
+- Blurred roles, and need for generalists
+- Difficult to predict outcomes, timelines, or budget
+- Flexibility can be abused by some clients
+- Flexibility can be abused by some team members
+- Fewer artefacts to reassure managers
+- Hard to scale up to large teams
+- Hard(ish) to handle outsourcing of coding
+
+**Choosing the right approach**
+
+![1554779570024](C:\Home\notes\uts\PMP\project-management.assets\1554779570024.png)
+
+| SDLC                   | Choose When..                                                |
+| ---------------------- | ------------------------------------------------------------ |
+| Waterfall (predictive) | Systems have been developed/documented using Waterfall<br />Requirements don't change too often <br />High criticality<br />Management/org culture feel more comfortable using Waterfall<br />There are adequate resources and time to complete full Waterfall<br />Communication (documentation) on systems work is important<br />Inexperienced or outsourced developers |
+| Agile (Adaptive)       | There is a project champion for Agile methods<br />Applications need to be developed quickly<br />Environment is dynamic and changeable<br />A rescue is needed (previous failed project and no time)<br />Incremental improvements are acceptable<br />Experienced analysts and developers |
+
+Some middle ground approaches
+
+- Rational Unified Process (RUP)
+- Agile Unified Process (AUP)
+- Dynamic Systems Development Method (DSDM)
+- Spiral SDLC
+- Scaled Agile Framework (SAFe)
+- Scrum of scrums
+
+Some generally useful methods and tips: Do participatory design activities. Prototype early (including on paper or PowerPoint).  Invest time in automated tests (unit and end-to-end). Reflect often on your process. Try to design independent modules. Try to design a hardware agnostic solution. Be mindful about what is worth tailoring
+
+Project Life Cycle (PLC) is about project delivery. Systems Development Life Cycle (SDLC) is about product delivery. Methodologies provide useful guidelines and encourage us to think before we act. Each project should be carefully examined to understand its requirements (technical, economic, social, risk, etc.) Some methods are time consuming or need specific skills. Project managers should understand various approaches. Pick the appropriate method for the project-and then apply it mindfully.
+
+### Questions and Answer
+
+1. Define what is meant by a ‘development methodology’.
+
+2. Explain the differences between bespoke software and off-the-shelf software. 
+
+3. Give 2 reasons for developing software rather than buying a package... and give 2 reasons for buying a package rather than developing software.
+
+4. Explain the key differences between the project life cycle (PLC) and systems development lifecycle (SDLC).
+
+5. Explain what is meant by a ‘predictive’ methodology.
+
+6. Within an Agile methodology explain what is meant by ‘time\-boxing’?
+
+7. Within the SCRUM approach there is an activity called a ‘Sprint’.  Explain what is meant by ‘Sprint’?
+
+8. What is a burn\-down chart and how is it used?
+
+9. Agile development is governed by 12 principles. Describe 3 of these.
+
+10. When choosing a development  approach, give 2 reasons for considering Waterfall 
+
+    over Agile... and give 2 reasons for Agile over Waterfall.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

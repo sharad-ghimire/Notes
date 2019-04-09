@@ -7,12 +7,11 @@
    | Users                   | Improved service | --        | --   | --        | --       |
    | User Manager            | -                | --        | --   | --        | --       |
    | CIO                     | -                | --        | --   | --        | --       |
-   | Manager of IT Resources | -                | --        | --   | --        | --       |
-   |Team Members | Finish
+   | Manager of IT Resources | -                | --        | --   | --        | --       | -- |Team Members | Finish|
 
 2) Communications Matrix : Used to define the method and format of regular project communications to key stakeholders (i.e. those with significant interest in, and influence over, the project)
 
-   | Receiving Stakeholder | Report Required  | Time Due            | Producer Name | Delivery Format |
-   | --------------------- | ---------------- | ------------------- | ------------- | --------------- |
-   | Manager               | Project Schedule | End of the week     |               | Document        |
-   | Users                 | -                | End of eifht months |               | Software        |
+| Receiving Stakeholder | Report Required  | Time Due            | Producer Name | Delivery Format |
+| --------------------- | ---------------- | ------------------- | ------------- | --------------- |
+| Manager               | Project Schedule | End of the week     |               | Document        |
+| Users                 | -                | End of eifht months |               | Software        |

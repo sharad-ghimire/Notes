@@ -169,8 +169,9 @@ Representation: Because enumerated types are represented by intergers, C's weake
 **Namespace**: Name spaces are a general programming concept. One name can have different meanings within the same scope as long as it occurs in two (or more) different name spaces. In such cases the programming language must provide a means of differentiating each reference to the name. The most immediate example is multiple uses of the same name for different field indentifiers in record structures (`struct`'s in C).
 
 ### Pointers
-- Are an effective way to represent linked data structures. 
-- Provides a higher way 
+
+- Are an effective way to represent linked data structures.
+- Provides a higher way
 
 ### Structures in C
 

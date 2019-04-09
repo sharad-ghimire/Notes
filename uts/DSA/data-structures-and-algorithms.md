@@ -1,12 +1,12 @@
 ## Lecture 1
 
-### Basic Definations
+#### Basic Definitions
 
 **Algorithm** : A well defined computational process that takes input and produces an output. Really it's a tool for solving a well specified computational problem.
 
 **Data Structure** : A way to store and organize data. It is just a special type of algorithm.
 
-### Basic C++
+#### Basic C++
 
 **Strings in C++** : Strings in C are just `null` terminated char arrays. (`null` is mostly 0, but since C++11, an actual `null_ptr` type exists.). Where could that possible go wrong? What if you forget the null? What if you want to know the length? C++ has a proper string class (`std:string`) that conceptually wraps a `char[]` and fixes these problems.
 
@@ -62,9 +62,9 @@ class myClass : public parentClass {
 
 Notice that the methods have no content there. They can but they don't have to. C++ routinely separates definition from source code. It expects a single pass complier, so we have to have all the names in the right order! Typically definitions are put in _header_ files (`.h` extension). Source code is normally in source files (`.cpp`). Somethimes code is put in the header file. Declare things in the right order for `#include`. Create the equivalent of interfaces (virtual classes).
 
-### A Data Structre
+#### A Data Structure
 
-**Abstract Data Types** : ADTs are specification of behaviour of Data Types. They don't specify implementations. Adhereing to an ADT allows us to code without having to know implementation details. (good for teams, reusablility and modularity). In Java, we'd achieve this with an `Interface` and abstraction.
+**Abstract Data Types** : ADTs are specification of behaviour of Data Types. They don't specify implementations. Adhering to an ADT allows us to code without having to know implementation details. (good for teams, reusability and modularity). In Java, we'd achieve this with an `Interface` and abstraction.
 
 **The List ADT**: A list stores data in sequential order. So, what methods should a list have?
 
@@ -269,7 +269,7 @@ int main(){
 # We will use C++17
 ```
 
-## Lecture 2
+## Lecture 2 - Linked List and Stack
 
 <small>intLinkedList.h</small> : Definition of what gonna be in the class `intLinkedList.cpp`.
 
@@ -462,11 +462,191 @@ class intStack{
 - Buffers of all kinds are Queues (things go in and get processed in order eventually).
 - Stacks are built into the programming language we're using - they control how the program functions.
 - If we put every thing in stack and tell them all out, we get the same sequence but in the reverse order.
-- Queue correspond to Breadth first notion and Stack corespond to Depth first notion. Stack kind of go all the way down to the bottom and back up to the top, so we get things out in reverse order while the Queue preserves the order we put it in.
+- Queue correspond to Breadth first notion and Stack correspond to Depth first notion. Stack kind of go all the way down to the bottom and back up to the top, so we get things out in reverse order while the Queue preserves the order we put it in.
 
 ![Stack](stack.png)
 
-## Lecture 3 - Vectors, Templates and Big-Oh
+### Lab 2
+
+```cpp
+/*
+	main.cpp
+*/
+#include <iostream>
+#include "intList.h"
+#include "intLinkedList.h"
+
+int main(){
+	intList * l = new intLinkedList();
+	for (int i = 0; i < 10; i++){
+		l->append(i);
+	}
+	intList * k = l;
+	while (!k->isEmpty()){
+		std::cout << k->getHead() << " ";
+		intList * temp = k->tail();
+		delete k;
+		k = temp;
+	}
+	std::cout << std::endl;
+}
+```
+
+```cpp
+/*
+	intList.h
+*/
+#ifndef INTLIST_H_
+#define INTLIST_H_
+
+class intList {
+public:
+  virtual ~intList() {};
+  virtual bool isEmpty() = 0;
+  virtual void prepend(int c) = 0;
+  virtual void append(int c) = 0;
+  virtual int getHead() = 0;
+  virtual intList * tail() = 0;
+};
+
+#endif
+```
+
+```cpp
+/*
+	intLinkedList.h
+*/
+#ifndef INTLINKEDLIST_H_
+#define INTLINKEDLIST_H_
+#include <cstddef>
+#include <string>
+#include "intList.h"
+
+using std::size_t;
+using std::string;
+
+class intLinkedList : public intList {
+ private:
+  class intNode{
+  	private:
+    	intNode * next;
+    	int data;
+  	public:
+        intNode();
+        intNode(intNode * next, int data);
+        ~intNode(); // make sure we clean up everything in the heap
+        int getData();
+        intNode * getNext();
+        void setNext(intNode *);
+  };
+  intNode * head;
+  size_t length; // unsigned 32 bits integer
+
+ public:
+  intLinkedList();
+  ~intLinkedList();
+  bool isEmpty();
+  void prepend(int c);
+  void append(int c);
+  int getHead();
+  intLinkedList * tail();
+};
+#endif
+```
+
+```cpp
+/*
+	intLinkedList.cpp
+*/
+#include "intLinkedList.h"
+#include <iostream>
+
+intLinkedList::intNode::intNode() {
+	intNode::data = 0;
+	intNode:next = nullptr;
+}
+
+intLinkedList::intNode::intNode(intNode * n, int d){
+	intNode::data = d;
+	intNode::next = n;
+}
+
+intLinkedList::intNode::~intNode() {
+  //You don't have to do anything for this one
+  // A node doesnot create anything in the heap. Only store primitive types
+}
+
+int intLinkedList::intNode::getData(){
+	return data;
+}
+
+intLinkedList::intNode * intLinkedList::intNode::getNext(){
+	return next;
+}
+
+void intLinkedList::intNode::setNext(intNode * n){
+	this->next = n;
+}
+
+intLinkedList::intLinkedList(){
+	head = nullptr;
+	length = 0;
+}
+
+
+intLinkedList::~intLinkedList(){
+	intNode * current = head;
+	while(current != nullptr){
+		intNode * next = current->getNext();
+		delete current;
+		current = next;
+	}
+}
+
+bool intLinkedList::isEmpty(){
+	return (length == 0);
+}
+
+void intLinkedList::prepend(int c){
+	intNode * node = new intNode(head, c);
+	head = node;
+	length++;
+}
+
+void intLinkedList::append(int c){
+	if(head == nullptr){
+		intNode * newNode = new intNode(nullptr, c);
+		head = newNode;
+		length++;
+	}
+	else {
+		intNode * tempHead = head;	
+		intNode * newNode = new intNode(nullptr, c);
+
+		for(int i = 0; i < length -1; i++){
+			tempHead = tempHead->getNext();
+		}
+		tempHead->setNext(newNode);
+		this->length++;
+	}
+}
+
+int intLinkedList::getHead(){
+	// check for nullptr
+	return this->head->getData();
+}
+
+intLinkedList * intLinkedList::tail(){
+	intLinkedList * tail = new intLinkedList();
+	if(head != nullptr){
+		tail->head = head->getNext();
+		tail->length = this->length - 1;
+	}
+	return tail;
+};
+```
+
+### Lecture 3 - Vectors, Templates and Big-Oh
 
 **The `vector` class**
 
@@ -615,7 +795,7 @@ void printArray(int a[], size n){
 }
 ```
 
-At each iteration we do a check to see if `i` is large wnough to stop, print something out, and add one to `i`. We also initialise `i` once. Assuming printing is one step. $T(n) = 1 + 3n \in O(n)$
+At each iteration we do a check to see if `i` is large enough to stop, print something out, and add one to `i`. We also initialise `i` once. Assuming printing is one step. $T(n) = 1 + 3n \in O(n)​$
 
 ```java
 for(int i = 0; i < n; i++){
@@ -625,7 +805,7 @@ for(int i = 0; i < n; i++){
 }
 ```
 
-For each iteration of the outer loop, we have $n$ iterations of the inner loop. For each iteration of the inner loop, we do one thing. So, if the outer loop runs $n$ times: $T(n) = n.n.1 = n^2 \in O(n^2)$.
+For each iteration of the outer loop, we have $n​$ iterations of the inner loop. For each iteration of the inner loop, we do one thing. So, if the outer loop runs $n​$ times: $T(n) = n.n.1 = n^2 \in O(n^2)​$.
 
 **Some other properties and notations**
 
@@ -634,5 +814,365 @@ For each iteration of the outer loop, we have $n$ iterations of the inner loop. 
 - If $f \in O(g)$ then $g \in \Omega(f). \Omega(.)$ is defined the same way as $O(.)$, but with $\geq$ , rather than $\leq$.
 - If $f \in O(g)$ anf $f \in \Omega(g)$, then $f \in \Theta(g)$.
 - $o$ replaces $O$ if we use $<$ instead of $\leq$ in the definition.
-- $w$ replaces $\Omega$ if we use $>$ instead of $\geq$ in its definition.
+- $w$ replaces $\Omega$ if we use $>$ instead of $\geq​$ in its definition.
+
+### Lab 3
+
+A simple restricted stack: implement a stack using an array, with the restriction that the stack can only hold a maximum number of things (which allows us to use an array simply).
+
+```cpp
+/*
+	main.cpp
+*/
+#include <iostream>
+#include "stack.h"
+
+int main(){
+	stack<int> s;
+	for (int i = 0; i < 10; i++){
+		s.push(i);
+	}
+	while (!s.empty()){
+		std::cout << s.pop() << std::endl;
+	}
+}
+```
+
+```cpp
+/*
+	stack.h
+*/
+//As this is a templated class, you should implement the class in the header.
+template <typename T>
+class stack {
+	private:
+        T data[10];
+        // You may want to add other class variables here.
+        int size;
+	
+	stack(){ //constructor
+		size = 0;
+	} 
+	~stack(){} //destructor
+	
+	void push(T t){ //add an element to the top of the stack
+		if(size<10){
+			data[size] = t;
+			size++;
+		}
+	} 
+	
+	T pop(){ //remove an element from the top of the stack
+		if(size > 0){
+			T popedElement = data[size-1];
+			// T d = data[--size];
+			size--;
+			return popedElement;
+		} else {
+			return T(); // empty constructor of T type
+		} 	
+	} 
+	
+	bool empty(){ //check if the stack is empty
+		return size == 0;
+	} 
+};
+```
+
+An unrestricted queue: implement a queue, still with an array, but without the limits on size. 
+
+```cpp
+#include <iostream>
+#include "queue.h"
+
+int main(){
+	int capacity;
+	std::cout << "Enter initial queue length: ";
+	std::cin >> capacity;
+	
+	queue<int> q(capacity);
+	
+	for (int i = 0; i < capacity; i++){
+		q.offer(i);
+	}
+	while (!q.empty()){
+		std::cout << q.poll() << std::endl;
+	}
+	
+	std::cout << "Overfilling the queue." << std::endl;
+	
+	for (int i = 0; i < 2 * capacity; i++){
+		q.offer(i);
+	}
+	
+	while (!q.empty()){
+		std::cout << q.poll() << std::endl;
+	}
+}
+```
+
+```cpp
+/*
+	queue.h
+*/
+#include <iostream>
+
+template <typename T>
+class queue {
+	
+	private:
+	//Add some internal data members here
+	//What ones do you need?
+	//An array like thing to store data...
+	//How do we handle arrays where we don't know the size?
+	//You'll also want to do something to keep track of where
+	//in the queue you're up to (there's a couple of ways
+	//to do this).
+        T * data;
+        int front;
+        int size;
+        int capacity;
+	
+	public:
+	//constructors
+	queue(){
+		data = new T[5];
+		capacity = 5;
+		size = 0;
+		front = 0;
+	}
+	
+	queue(int capacity){
+		this->capacity = capacity;
+		data = new T[capacity];
+		size = 0;
+		front = 0;
+	}
+	~queue(){
+		delete[] data;
+	}
+	
+	void offer(T t){
+		if(front + size == capacity){
+			T * newArray = new T[capacity*3];
+			for(int i = 0 ; i < size; i++ ){
+				newArray[i] = data[front + i];
+			}
+			front = 0;
+			newArray[(front + size) % capacity] = t;
+			size++;
+			delete[] data;
+			data = newArray; 
+			this->capacity = capacity*3;
+		} else {
+			data[(front + size) % capacity] = t;
+			size++;
+		}
+	} //add something to the back of the queue
+	
+	T poll(){
+		T polledElement = data[front];
+		front++;
+		size--;
+		return polledElement;
+	} //remove something from the front of the queue
+	
+	bool empty(){
+		return size == 0;
+	} //is the queue empty?
+	
+	void toString() {	
+		for(int i = 0; i < size; i++){
+			std::cout<<  "Data: "<<data[front + i]<<std::endl;
+			std::cout<< "Size: "<<size<<std::endl;
+		}
+		//std::cout<<"Data : "<< data[3]<< " At 3"<<std::endl;
+	}
+	int getSize() {return size;}
+};
+```
+
+A more sensible approach: use the `vector` class to build a stack. 
+
+```cpp
+#include <vector>
+
+template <typename T>
+class stack {
+
+	private:
+		std::vector<T> data; 
+	public:
+	stack(){
+		
+	}
+	~stack(){
+	}
+	
+	void push(T t){
+		data.push_back(t);
+	}
+    
+	T pop() {
+		T d = data.at(data.size() - 1);
+		data.pop_back();
+		return d;
+	}
+	T peek() {
+		return data.at(data.size() - 1);
+	} //A new one, this returns the top element of the stack without removing it. (i.e. lets us peek at the top)
+	bool empty() {
+		return data.empty();
+	}
+
+};
+```
+
+### Lab 4
+
+**7 Rules for comparing functions asymptotically:**
+
+1. $n^k \in O(n^{k+c})\; \text{as long as}\;\; c\geq 0$ or, for polynomials, just compare the degrees.
+2.  $log(n)\in O(n)$
+3. $log(n) \in O(n^k)\; \; \text{for any k} > 0$  (including when k is a small fraction)
+4. $f(n)+g(n)+...+h(n)\in O(max\{ f(n), g(n), ..., h(n) \})$ Or, for things added together, we only care about the worst bit.
+5. Ignore constant multipliers
+6. $f\in O(f)$ Or, everything is in big-oh of itself.
+7. $n^k \in O(c^n)\; \text{for any k}\geq0,c > 1$ Or, exponentials are always eventually worse than polynomials.
+8. If $f \in O(g) \; then \; h \times f \in O(h \times g)$ for every sensible $h$. Or, we can multiply or divide by common factors, as long as we don't try anything silly (for the mathematically inclined, try to find an interesting silly case).
+
+**Comparing Functions**: Put the following list of functions into their big-oh order (i.e. if our final list has f followed by g, this means $f\in O(g)$
+
+- $log(n) < n < n^2 < n^3$ : Apply rule 2 to get log(n) before n, and repeatedly apply rule 1 to get the rest of the ordering.
+- $log(n) < n < nlog(n)<n^{1.5} < n^2$ : This is a mix of rule 2a and rule 7 where  h(n) = n (or n^0.5), depending on which way you want to do it).
+-  $2^{logn} < n^{100}  < 2^{n+5} < 3^n  $ : This one is a bit trickier - the rules don't cover every possible case! The first step in this is to realise that 2^(log(n)) is just n, so it's the first. The second step is covered by rule 6 - exponentials are always worse than polynomials. Then we come down to 2^(n+5) and 3^(n). The "+5" in the first is equivalent to multiplying by 32, so we can throw away this constant multiplier (rule 4), and we're only comparing 2^n and 3^n. In this case, the one with the larger base is always worse.
+
+**The Master Theorem for Solving Recurrence Relations**
+
+The master theorem: Given a recurrence relation in the form:
+$$
+T(n) = aT(\frac{n}{b}) + f(n)
+$$
+where $f(n) \in \Theta(n^k)$. We can solve the recurrence using the following rules:
+
+<u>Case 1:</u> If $a<b^k$ then $T(n) \in \Theta(n^k)$.
+
+<u>Case 2:</u> If  $ a = b^k$ then $T(n) \in \Theta(n^klog(n))$ .
+
+<u>Case 3</u>: If $a > b^k$ then $T(n) \in \Theta(n^{log_b(a)})$.
+
+**Working out running Time of piece of code:**
+
+```cpp
+int a = 1;
+int b = 2;
+
+std::cout << a << std::endl;
+std::cout << a + b << std::endl;
+/* Answer: O(1)
+The running time of this code does not depend on any input, so it only ever takes a constant number of steps, which we express as O(1) (think rule 4).
+*/
+void func(int m){
+	int i = 1;
+	while (i < m){
+		std::cout << i << std::endl;
+		i = i + 1;
+	}
+}
+/* Answer: O(m)
+The main influence on the running time here is the loop. The loop repeats m times,doing a constant amount of work at each iteration, giving O(m).
+*/
+```
+
+```cpp
+int select(int[] T){
+	for (int i = 0; i < T.length; i++){
+		int min_j = i;
+		int min_x = T[i];
+		for (int j = i+1; j < T.length; j++){
+			if (T[j] < min_x) {
+				min_j = j;
+				min_x = T[j];
+			}
+        }
+		T[min_j] = T[i];
+		T[i] = min_x;
+	}
+}
+```
+
+Answer: $O((T.length)^2)​$ 
+Although the inner loop does a variable amount of work at each iteration, it always does at most a constant amount of work. In general, with `if` statements, we take the worst case out of the possibilities (particularly with `if-else` statements).
+
+The other complication is the trickier indexing in the inner loop - we don't start from 0. The inner loop runs `T.length`-1times for the first iteration of the outer loop, `T.length`-2 for the second, `T.length`-3 for the third, down to 0 for the last. Giving:
+$$
+\sum_{i=1}^{T.Length}\sum_{j=i+1}^{T.length}c = \frac{T.length\cdot{T.length-1}}{2}\times c
+$$
+Where c is the constant amount of work inside the loop. At this point we can apply our rules and get $O(T.length^2)$.
+
+```cpp
+bool recur(int n){
+	if (n == 0) return false;
+	if (n == 1) return true;
+	return recur(n/2);
+}
+```
+
+Answer: $\Theta(log(n))$
+There is one recursive call, where we halve the input, so a = 1, and b = 2. The rest of the function does a constant amount of work, so f(n) = c for some c. This is a polynomial of degree 0 (we can think of c as $cn^{0}​$), so k = 0. This gives us the second case in the Master Theorem.
+
+**Fibonacci**
+
+Recursive
+
+```cpp
+#include <iostream>
+
+int fib_rec(int n){
+	// 1, 1, 2, 3, 5, 8, 13,....
+	if(n == 0) return 0;
+	if (n == 1) return 1;
+	return fib_rec(n -1) + fib_rec(n - 2);
+}
+
+int main(){
+	std::cout << "Enter a number: " << std::endl;
+	int n;
+	std::cin >> n;
+	std::cout << "The nth Fibonacci number is: " << fib_rec(n) << std::endl;
+}
+```
+
+Iterative
+
+```cpp
+#include <iostream>
+
+long fib_itr(long n){
+	long a = 1;
+	long b = 1;
+	long x = 0;
+	for(long i = 0; i < n; i++){
+		if(i == 0) {
+			x = 0;
+			continue;
+		}
+		if(i == 1){
+			x = 1;
+			continue;
+		}
+		x = a + b;
+		a = b;
+		b = x;
+	}
+	return b;
+}
+
+int main(){
+	std::cout << "Enter a number: " << std::endl;
+	long n;
+	std::cin >> n;
+	std::cout << "The nth Fibonacci number is: " << fib_itr(n) << std::endl;
+}
+```
 

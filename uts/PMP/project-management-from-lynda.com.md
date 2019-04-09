@@ -7,7 +7,7 @@ link: "https://www.lynda.com/Project-tutorials/Learn-what-project-management/424
 
 **Components of Project Management**
 
-- _Project_: A project is a temporary endeavor hat has a specific and unique goal, and usually a budget.
+- _Project_: A project is a temporary endeavour hat has a specific and unique goal, and usually a budget.
   - A project is temporary i.e it has a definite beginning and end. If the project seems to go forever, we haven't clearly defined what we're trying to accomplish.
   - A project produces a unique result i.e each project is unique.
   - Most project has budget. Money, time and resources.
@@ -90,10 +90,62 @@ link: "https://www.lynda.com/Project-tutorials/Learn-what-project-management/424
 
 ## Exploring PM Knowledge Areas
 
-**Manage project scope**: Project Scope describes the boundaries of a project(included and not included in project). Scope management is manage what is, and is not, included in the project
+**Scope Management**: Project Scope describes the boundaries of a project (included and not included in project). Scope management is manage what is, and is not, included in the project.
 
 1. Scope Management Plan: outlines the processes for defining, validating and controlling scope.
 2. Collect Requirements: identifying and documenting project requirements needed to achieve the project objectives.
-3. Define Scope: weed out requirements that aren't absolutely necessary. Prepare a _Project Scope_ statement to document what is and isn't included in scope. The project team has to work to deliver the project scope. We create a Work Breakdown Structure, to show our project divided into progressively smaller pieces.
-4. Control Scope: Scope has a tendency to expand if you aren't careful, which is why controlling scope is an important part of Scope Management. To prevent Scope Creep, we have to monitor project status and manage change requests.
-5. Validate Scope: review completed deliverables to make sure they've been completed satisfactorily.
+3. Define Scope: weed out requirements that aren't absolutely necessary. Prepare a _Project Scope_ statement to document what is and isn't included in scope. The project team has to work to deliver the project scope. 
+4. We create a _Work Breakdown Structure_, to show our project divided into progressively smaller pieces. Scope Creep in project management refers to changes, continuous or uncontrolled growth in a project's scope, at any point after the project begins. This can occur when the scope of a project is not properly defined, documented, or controlled.
+5. Control Scope: Scope has a tendency to expand if you aren't careful, which is why controlling scope is an important part of Scope Management. To prevent Scope Creep, we have to monitor project status and manage change requests.
+6. Validate Scope: review completed deliverables to make sure they've been completed satisfactorily.
+
+**Time Management**: Time management to ensure that we complete our project in time.
+
+1. Create a schedule management plan: Document how the project schedule will be developed, managed, executed and controlled.
+
+2. Define schedule activities or task: WBS are called work packages and they identify specific project deliverables. Break down each package into activities that spell out the work needed to complete it.
+
+   ![1554798545794](C:\Home\notes\uts\PMP\project-management-from-lynda.com.assets\1554798545794.png)
+
+3. Sequence activities: Once you have schedule activities identified, it's time to put them into sequence. The activity sequence is based on the relationships between tasks. When we've added all our activity relationships, the result is a logical sequence of the order in which project work should occur.
+
+   ![1554798713308](C:\Home\notes\uts\PMP\project-management-from-lynda.com.assets\1554798713308.png)
+
+4. Estimate Resource and durations: Resources we need, including people, equipment, and materials. Then we can use our resource estimates to figure out how long activities will take to finish. 
+
+5. Develop a schedule: Critical path and Critical chain method for scheduling approach.
+
+   ![1554798867829](C:\Home\notes\uts\PMP\project-management-from-lynda.com.assets\1554798867829.png)
+
+6. Control schedule: monitor progress along with changes to the schedule, so we can spot any deviations from our baseline. 
+
+**Cost Management**: Cost Management. During planning, we put together a cost management plan that spells out how we're going to handle costs in the project. Next, we pull planning info together, like our WBS (Work Breakdown Structure), Schedule, and estimated resources so we can estimate project costs. However, many projects are given a budget to meet. In that case, we may need to juggle scope, resources and schedule until the cost estimate matches the budget. Once work begins on our project, we monitor status and track actual costs.
+Estimating Techniques:  (depends on the project and organization)
+
+- Expert Judgement
+- Parametric Estimating
+- Bottom up estimating
+
+**Quality Management**: 
+$$
+Project\;success = Meeting\;objective\\Project\;success\ne Exceeding\;objectives
+$$
+Quality management includes processes to make sure that a project satisfies its objectives and requirements.  In a quality management plan, we identify the quality standards required for the project and deliverables. Things like product specifications, acceptable error rates, and tolerances for physical dimensions. The plan also documents how we'll show that the project meets those standards. Quality assurance is what we do to make sure that our project complies with the quality standards we define. Walk-throughs, reviews, or creating prototypes: we analyse test results to see whether they meet the standards you set. Another aspect of quality assurance is evaluating our quality processes and procedures to see if there are ways to improve. Quality control is testing deliverables and recording the results of those tests. 
+
+**Human Resource Management**: During planning, we identify the skills and roles we need to perform the project work. With those identified, we can build a staffing plan for our project. The next step is to acquire the people we need. Once people are onboard, we have to help the individuals assigned to our project work together and become a team. As work progresses, we manage the team. We track people's performance, provide feedback to help them improve, resolve issues, and manage conflicts.
+
+**Communication Management:** Communication management helps us and everyone else on the project team communicate well. During planning, we develop a plan for communicating on our project. This plan outlines the information we communicate, the audiences who receive information, the methods we use to send it, and how often we stay in touch. Creating, distributing, retrieving,and storing project information, make sure that stakeholders are getting the information they need in the best possible way.
+
+**Risk Management**:  Risks (Events, good or bad that may occur in the future). Not only reduce the probability and impact of negative events, you're ready to take advantage of positive events that occur.
+
+1. Create a risk management plan: Identify how to perform risk management tasks.
+2. Identify the risks project could face
+3. Analyse risks: analyse the probability that each risk might occur as well as its impact on the project if it does. Prioritize risks
+4. Plan risk responses: Avoid, transfer, mitigate, identifying contingencies.
+5. Monitor risks: implement the response and track results.
+
+**Procurement Management**: Procurement (Purchasing or acquiring products and services). Managing procurement includes identifying what we need, selecting vendors who provide those items, and managing the contracts we award. 
+
+- The first step in procurement management is to create a plan. In addition to documenting procurement procedures, this plan identifies what we need to get from outside our organization and potential vendors or sellers.
+- The next step in procurement is obtaining bids or proposals from vendors or sellers, selecting who we'll use and awarding contracts. While work is underway, we have to manage those contracts, monitor vendor performance, and manage any changes.
+- Close procurement
