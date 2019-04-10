@@ -1028,6 +1028,41 @@ class stack {
 };
 ```
 
+## Lecture 04 - Recursion
+
+##### Divide and Conquer
+
+Multiplying Large Numbers: 
+$$
+\frac{{}_{1}4 \quad {}_{1\\3} 3 \quad 9 \quad \times \\ \; \quad \quad \;4\quad 2}{} \\{\frac{\quad{}_{1}\quad{}_{1}8 \quad 7 \quad 8 \\1 \quad 7 \quad 5 \quad 6 \quad 0 \qquad}{1\quad8\quad4\quad3\quad8\qquad}}
+$$
+Taking the length of the numbers as the size of the input, this is a $\Theta(n^2)​$-time algorithm. Can we do better?
+
+- Maybe we can try breaking the problem down.
+
+- If we have two numbers $a=a_1a_2...a_n$ and $b = b_1b_2...b_n$ we can divide them each in half: $a_l = a_1...a_{[\frac{n}{2}]}$, $a_r = a_{[\frac{n}{2}]}...a_n$ $b_l...b_{[\frac{n}{2}]}$, $b_r = b_{[\frac{n}{2}]}...b_n$. 
+
+- Then, $a\times b = 10^na_lb_l+10^{\frac{n}{2}}(a_lb_r + b_la_r) + a_rb_r ​$.
+
+- So now we only have 4 half sized multiplications! That's exactly the same 
+  $$
+  4\times \Big(\frac{n}{2}\Big)^2 = n^2
+  $$
+
+- 
+
+- Hey... $r = (a_l + a_r) \times (b_l + b_r) = a_lb_l + (a_lb_r + b_la_r) + a_rb_r$.
+
+- So if we calculate $p = a_lb_l, \; q = a_rb_r \; and \; r ...$
+
+- $a \times b = 10^np + 10^{\frac{n}{2}} (r - p -q) + q$.
+
+- So, we're now doing 3 multiplications of half the size. (At the cost of some addition and subtraction.)
+  $$
+  
+  $$
+  
+
 ### Lab 4
 
 **7 Rules for comparing functions asymptotically:**
