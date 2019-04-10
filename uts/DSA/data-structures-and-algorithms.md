@@ -1032,7 +1032,7 @@ class stack {
 
 ##### Divide and Conquer
 
-Multiplying Large Numbers: 
+**Multiplying Large Numbers:** 
 $$
 \frac{{}_{1}4 \quad {}_{1\\3} 3 \quad 9 \quad \times \\ \; \quad \quad \;4\quad 2}{} \\{\frac{\quad{}_{1}\quad{}_{1}8 \quad 7 \quad 8 \\1 \quad 7 \quad 5 \quad 6 \quad 0 \qquad}{1\quad8\quad4\quad3\quad8\qquad}}
 $$
@@ -1059,9 +1059,24 @@ Taking the length of the numbers as the size of the input, this is a $\Theta(n^2
 
 - So, we're now doing 3 multiplications of half the size. (At the cost of some addition and subtraction.)
   $$
-  
+  3 \times \Big( \frac{n}{2} \Big)^2 = \frac{3}{4}n^2 < n^2
   $$
-  
+
+- So we're now doing 3 multiplication instead of 4.
+
+- What if we can break down $a_l, b_l, a_r \;and \;b_r$  again?
+
+- This is where recursion and abstract functional design become the algorithmic paradigm of divide and conquer.
+
+- Divide and conquer is where we solve a problem by recursively decomposing the instance into smaller instances of subproblems.
+
+- If we do it correctly, we can do better than the naïve approach.
+
+How well do we do with multiplication? So how much time do we save with our better multiplication algorithm? To express running times of recursive algorithms, we use recurrence relations.
+$$
+T_{\text{multi}}(n) = \Bigg\{ 3T_{multi}\Big(\frac{n}{2}\Big) + c_1n \quad \text{for large enough} \; n \geq N_0 \; \text{otherwise} \; c_2
+$$
+
 
 ### Lab 4
 
@@ -1069,7 +1084,7 @@ Taking the length of the numbers as the size of the input, this is a $\Theta(n^2
 
 1. $n^k \in O(n^{k+c})\; \text{as long as}\;\; c\geq 0$ or, for polynomials, just compare the degrees.
 2.  $log(n)\in O(n)$
-3. $log(n) \in O(n^k)\; \; \text{for any k} > 0$  (including when k is a small fraction)
+3. $log(n) \in O(n^k)\; \; \text{for any k} > 0​$  (including when k is a small fraction)
 4. $f(n)+g(n)+...+h(n)\in O(max\{ f(n), g(n), ..., h(n) \})$ Or, for things added together, we only care about the worst bit.
 5. Ignore constant multipliers
 6. $f\in O(f)$ Or, everything is in big-oh of itself.
