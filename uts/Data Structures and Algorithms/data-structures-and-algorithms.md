@@ -620,7 +620,7 @@ void intLinkedList::append(int c){
 		length++;
 	}
 	else {
-		intNode * tempHead = head;	
+		intNode * tempHead = head;
 		intNode * newNode = new intNode(nullptr, c);
 
 		for(int i = 0; i < length -1; i++){
@@ -685,7 +685,7 @@ public class Test {
     ArrayList<Integer> v = new ArrayList<>(); // we can only put object type in here
     ArrayList<int> v = new ArrayList<>(); // and cannot do primitive types
     for(int i : v ){
-      // 
+      //
     }
 
   }
@@ -795,7 +795,7 @@ void printArray(int a[], size n){
 }
 ```
 
-At each iteration we do a check to see if `i` is large enough to stop, print something out, and add one to `i`. We also initialise `i` once. Assuming printing is one step. $T(n) = 1 + 3n \in O(n)​$
+At each iteration we do a check to see if `i` is large enough to stop, print something out, and add one to `i`. We also initialise `i` once. Assuming printing is one step. $T(n) = 1 + 3n \in O(n)$
 
 ```java
 for(int i = 0; i < n; i++){
@@ -805,7 +805,7 @@ for(int i = 0; i < n; i++){
 }
 ```
 
-For each iteration of the outer loop, we have $n​$ iterations of the inner loop. For each iteration of the inner loop, we do one thing. So, if the outer loop runs $n​$ times: $T(n) = n.n.1 = n^2 \in O(n^2)​$.
+For each iteration of the outer loop, we have $n$ iterations of the inner loop. For each iteration of the inner loop, we do one thing. So, if the outer loop runs $n$ times: $T(n) = n.n.1 = n^2 \in O(n^2)$.
 
 **Some other properties and notations**
 
@@ -814,7 +814,7 @@ For each iteration of the outer loop, we have $n​$ iterations of the inner loo
 - If $f \in O(g)$ then $g \in \Omega(f). \Omega(.)$ is defined the same way as $O(.)$, but with $\geq$ , rather than $\leq$.
 - If $f \in O(g)$ anf $f \in \Omega(g)$, then $f \in \Theta(g)$.
 - $o$ replaces $O$ if we use $<$ instead of $\leq$ in the definition.
-- $w$ replaces $\Omega$ if we use $>$ instead of $\geq​$ in its definition.
+- $w$ replaces $\Omega$ if we use $>$ instead of $\geq$ in its definition.
 
 ### Lab 3
 
@@ -849,19 +849,19 @@ class stack {
         T data[10];
         // You may want to add other class variables here.
         int size;
-	
+
 	stack(){ //constructor
 		size = 0;
-	} 
+	}
 	~stack(){} //destructor
-	
+
 	void push(T t){ //add an element to the top of the stack
 		if(size<10){
 			data[size] = t;
 			size++;
 		}
-	} 
-	
+	}
+
 	T pop(){ //remove an element from the top of the stack
 		if(size > 0){
 			T popedElement = data[size-1];
@@ -870,16 +870,16 @@ class stack {
 			return popedElement;
 		} else {
 			return T(); // empty constructor of T type
-		} 	
-	} 
-	
+		}
+	}
+
 	bool empty(){ //check if the stack is empty
 		return size == 0;
-	} 
+	}
 };
 ```
 
-An unrestricted queue: implement a queue, still with an array, but without the limits on size. 
+An unrestricted queue: implement a queue, still with an array, but without the limits on size.
 
 ```cpp
 #include <iostream>
@@ -889,22 +889,22 @@ int main(){
 	int capacity;
 	std::cout << "Enter initial queue length: ";
 	std::cin >> capacity;
-	
+
 	queue<int> q(capacity);
-	
+
 	for (int i = 0; i < capacity; i++){
 		q.offer(i);
 	}
 	while (!q.empty()){
 		std::cout << q.poll() << std::endl;
 	}
-	
+
 	std::cout << "Overfilling the queue." << std::endl;
-	
+
 	for (int i = 0; i < 2 * capacity; i++){
 		q.offer(i);
 	}
-	
+
 	while (!q.empty()){
 		std::cout << q.poll() << std::endl;
 	}
@@ -919,7 +919,7 @@ int main(){
 
 template <typename T>
 class queue {
-	
+
 	private:
 	//Add some internal data members here
 	//What ones do you need?
@@ -932,7 +932,7 @@ class queue {
         int front;
         int size;
         int capacity;
-	
+
 	public:
 	//constructors
 	queue(){
@@ -941,7 +941,7 @@ class queue {
 		size = 0;
 		front = 0;
 	}
-	
+
 	queue(int capacity){
 		this->capacity = capacity;
 		data = new T[capacity];
@@ -951,7 +951,7 @@ class queue {
 	~queue(){
 		delete[] data;
 	}
-	
+
 	void offer(T t){
 		if(front + size == capacity){
 			T * newArray = new T[capacity*3];
@@ -962,26 +962,26 @@ class queue {
 			newArray[(front + size) % capacity] = t;
 			size++;
 			delete[] data;
-			data = newArray; 
+			data = newArray;
 			this->capacity = capacity*3;
 		} else {
 			data[(front + size) % capacity] = t;
 			size++;
 		}
 	} //add something to the back of the queue
-	
+
 	T poll(){
 		T polledElement = data[front];
 		front++;
 		size--;
 		return polledElement;
 	} //remove something from the front of the queue
-	
+
 	bool empty(){
 		return size == 0;
 	} //is the queue empty?
-	
-	void toString() {	
+
+	void toString() {
 		for(int i = 0; i < size; i++){
 			std::cout<<  "Data: "<<data[front + i]<<std::endl;
 			std::cout<< "Size: "<<size<<std::endl;
@@ -992,7 +992,7 @@ class queue {
 };
 ```
 
-A more sensible approach: use the `vector` class to build a stack. 
+A more sensible approach: use the `vector` class to build a stack.
 
 ```cpp
 #include <vector>
@@ -1001,18 +1001,18 @@ template <typename T>
 class stack {
 
 	private:
-		std::vector<T> data; 
+		std::vector<T> data;
 	public:
 	stack(){
-		
+
 	}
 	~stack(){
 	}
-	
+
 	void push(T t){
 		data.push_back(t);
 	}
-    
+
 	T pop() {
 		T d = data.at(data.size() - 1);
 		data.pop_back();
@@ -1032,24 +1032,25 @@ class stack {
 
 ##### Divide and Conquer
 
-**Multiplying Large Numbers:** 
+**Multiplying Large Numbers:**
+
 $$
-\frac{{}_{1}4 \quad {}_{1\\3} 3 \quad 9 \quad \times \\ \; \quad \quad \;4\quad 2}{} \\{\frac{\quad{}_{1}\quad{}_{1}8 \quad 7 \quad 8 \\1 \quad 7 \quad 5 \quad 6 \quad 0 \qquad}{1\quad8\quad4\quad3\quad8\qquad}}
+\frac{{}_{1}4 \quad {}_{1\\3} 3 \quad 9\times \\ \; \quad \quad \;4\quad 2}{} \\{\frac{\quad{}_{1}\quad{}_{1}8 \quad 7 \quad 8 \\1 \quad 7 \quad 5 \quad 6 \quad 0 \qquad}{1\quad8\quad4\quad3\quad8\qquad}}
 $$
-Taking the length of the numbers as the size of the input, this is a $\Theta(n^2)​$-time algorithm. Can we do better?
+
+Taking the length of the numbers as the size of the input, this is a $\Theta(n^2)$-time algorithm. Can we do better?
 
 - Maybe we can try breaking the problem down.
 
-- If we have two numbers $a=a_1a_2...a_n$ and $b = b_1b_2...b_n$ we can divide them each in half: $a_l = a_1...a_{[\frac{n}{2}]}$, $a_r = a_{[\frac{n}{2}]}...a_n$ $b_l...b_{[\frac{n}{2}]}$, $b_r = b_{[\frac{n}{2}]}...b_n$. 
+- If we have two numbers $a=a_1a_2...a_n$ and $b = b_1b_2...b_n$ we can divide them each in half: $a_l = a_1...a_{[\frac{n}{2}]}$, $a_r = a_{[\frac{n}{2}]}...a_n$ $b_l...b_{[\frac{n}{2}]}$, $b_r = b_{[\frac{n}{2}]}...b_n$.
 
-- Then, $a\times b = 10^na_lb_l+10^{\frac{n}{2}}(a_lb_r + b_la_r) + a_rb_r ​$.
+- Then, $a\times b = 10^na_lb_l+10^{\frac{n}{2}}(a_lb_r + b_la_r) + a_rb_r $.
 
-- So now we only have 4 half sized multiplications! That's exactly the same 
+- So now we only have 4 half sized multiplications! That's exactly the same
+
   $$
   4\times \Big(\frac{n}{2}\Big)^2 = n^2
   $$
-
-- 
 
 - Hey... $r = (a_l + a_r) \times (b_l + b_r) = a_lb_l + (a_lb_r + b_la_r) + a_rb_r$.
 
@@ -1058,13 +1059,14 @@ Taking the length of the numbers as the size of the input, this is a $\Theta(n^2
 - $a \times b = 10^np + 10^{\frac{n}{2}} (r - p -q) + q$.
 
 - So, we're now doing 3 multiplications of half the size. (At the cost of some addition and subtraction.)
+
   $$
   3 \times \Big( \frac{n}{2} \Big)^2 = \frac{3}{4}n^2 < n^2
   $$
 
 - So we're now doing 3 multiplication instead of 4.
 
-- What if we can break down $a_l, b_l, a_r \;and \;b_r$  again?
+- What if we can break down $a_l, b_l, a_r \;and \;b_r$ again?
 
 - This is where recursion and abstract functional design become the algorithmic paradigm of divide and conquer.
 
@@ -1073,18 +1075,22 @@ Taking the length of the numbers as the size of the input, this is a $\Theta(n^2
 - If we do it correctly, we can do better than the naïve approach.
 
 How well do we do with multiplication? So how much time do we save with our better multiplication algorithm? To express running times of recursive algorithms, we use recurrence relations.
+
 $$
 T_{\text{multi}}(n) = \Bigg\{ 3T_{multi}\Big(\frac{n}{2}\Big) + c_1n \quad \text{for large enough} \; n \geq N_0 \; \text{otherwise} \; c_2
 $$
 
+$$
+T_{mult}(n) = 3T_{mult}(\frac{n}{2}) + \Theta(n) \;\;\; \\= 3\Big(3T_{mult}(\frac{n}{4}) + \Theta(n)\Big) +  \Theta(n)\\
+$$
 
 ### Lab 4
 
 **7 Rules for comparing functions asymptotically:**
 
 1. $n^k \in O(n^{k+c})\; \text{as long as}\;\; c\geq 0$ or, for polynomials, just compare the degrees.
-2.  $log(n)\in O(n)$
-3. $log(n) \in O(n^k)\; \; \text{for any k} > 0​$  (including when k is a small fraction)
+2. $log(n)\in O(n)$
+3. $log(n) \in O(n^k)\; \; \text{for any k} > 0$ (including when k is a small fraction)
 4. $f(n)+g(n)+...+h(n)\in O(max\{ f(n), g(n), ..., h(n) \})$ Or, for things added together, we only care about the worst bit.
 5. Ignore constant multipliers
 6. $f\in O(f)$ Or, everything is in big-oh of itself.
@@ -1094,20 +1100,22 @@ $$
 **Comparing Functions**: Put the following list of functions into their big-oh order (i.e. if our final list has f followed by g, this means $f\in O(g)$
 
 - $log(n) < n < n^2 < n^3$ : Apply rule 2 to get log(n) before n, and repeatedly apply rule 1 to get the rest of the ordering.
-- $log(n) < n < nlog(n)<n^{1.5} < n^2$ : This is a mix of rule 2a and rule 7 where  h(n) = n (or n^0.5), depending on which way you want to do it).
--  $2^{logn} < n^{100}  < 2^{n+5} < 3^n  $ : This one is a bit trickier - the rules don't cover every possible case! The first step in this is to realise that 2^(log(n)) is just n, so it's the first. The second step is covered by rule 6 - exponentials are always worse than polynomials. Then we come down to 2^(n+5) and 3^(n). The "+5" in the first is equivalent to multiplying by 32, so we can throw away this constant multiplier (rule 4), and we're only comparing 2^n and 3^n. In this case, the one with the larger base is always worse.
+- $log(n) < n < nlog(n)<n^{1.5} < n^2$ : This is a mix of rule 2a and rule 7 where h(n) = n (or n^0.5), depending on which way you want to do it).
+- $2^{logn} < n^{100}  < 2^{n+5} < 3^n  $ : This one is a bit trickier - the rules don't cover every possible case! The first step in this is to realise that 2^(log(n)) is just n, so it's the first. The second step is covered by rule 6 - exponentials are always worse than polynomials. Then we come down to 2^(n+5) and 3^(n). The "+5" in the first is equivalent to multiplying by 32, so we can throw away this constant multiplier (rule 4), and we're only comparing 2^n and 3^n. In this case, the one with the larger base is always worse.
 
 **The Master Theorem for Solving Recurrence Relations**
 
 The master theorem: Given a recurrence relation in the form:
+
 $$
 T(n) = aT(\frac{n}{b}) + f(n)
 $$
+
 where $f(n) \in \Theta(n^k)$. We can solve the recurrence using the following rules:
 
 <u>Case 1:</u> If $a<b^k$ then $T(n) \in \Theta(n^k)$.
 
-<u>Case 2:</u> If  $ a = b^k$ then $T(n) \in \Theta(n^klog(n))$ .
+<u>Case 2:</u> If $ a = b^k$ then $T(n) \in \Theta(n^klog(n))$ .
 
 <u>Case 3</u>: If $a > b^k$ then $T(n) \in \Theta(n^{log_b(a)})$.
 
@@ -1151,13 +1159,15 @@ int select(int[] T){
 }
 ```
 
-Answer: $O((T.length)^2)​$ 
+Answer: $O((T.length)^2)$
 Although the inner loop does a variable amount of work at each iteration, it always does at most a constant amount of work. In general, with `if` statements, we take the worst case out of the possibilities (particularly with `if-else` statements).
 
 The other complication is the trickier indexing in the inner loop - we don't start from 0. The inner loop runs `T.length`-1times for the first iteration of the outer loop, `T.length`-2 for the second, `T.length`-3 for the third, down to 0 for the last. Giving:
+
 $$
 \sum_{i=1}^{T.Length}\sum_{j=i+1}^{T.length}c = \frac{T.length\cdot{T.length-1}}{2}\times c
 $$
+
 Where c is the constant amount of work inside the loop. At this point we can apply our rules and get $O(T.length^2)$.
 
 ```cpp
@@ -1169,7 +1179,7 @@ bool recur(int n){
 ```
 
 Answer: $\Theta(log(n))$
-There is one recursive call, where we halve the input, so a = 1, and b = 2. The rest of the function does a constant amount of work, so f(n) = c for some c. This is a polynomial of degree 0 (we can think of c as $cn^{0}​$), so k = 0. This gives us the second case in the Master Theorem.
+There is one recursive call, where we halve the input, so a = 1, and b = 2. The rest of the function does a constant amount of work, so f(n) = c for some c. This is a polynomial of degree 0 (we can think of c as $cn^{0}$), so k = 0. This gives us the second case in the Master Theorem.
 
 **Fibonacci**
 
@@ -1226,3 +1236,51 @@ int main(){
 }
 ```
 
+### Lecture 05 - Graphs and Greedy Algorithms
+
+Graphs are an incredibly useful modelling tool. Simple graphs consist of : A set of elements called _vertices_. A set of unordered pairs of distinct vertices called _edges_. There is only one edge between a pair of vertices.
+
+Other types of graph come from altering these conditions:
+
+- Ordered pairs gives _directed graphs_
+- More than one edge per pair gives _multi-graphs_.
+- More than two vertices per edge give _hypergraphs_.
+- Edges (and vertices) can be weighted, labelled, &c.
+
+These vertices model interesting things like Computers, Processes, Proteins, Production facilities, Websites etc. The edges model relationships between interesting things like Network lines, Shared resources, Protein interaction, Transport links, Hyper links, etc. Used somehow in virtually every part of computer science.
+
+- If two vertices have an edge between them, they are *adjacent*.
+- If a vertex is one of the pair that form an edge, it is *incident* to that edge.
+- The number of edges incident to a vertex is the *degree* of that vertex.
+- Graphs will be denoted with uppercase letters like *G, H, &c*.
+- Vertices will be denoted by lowercase letters like *u, v, &c* or natural numbers $1, 2, 3, 4, ...n$.
+- Edges will be denoted by lowercase letter like *e, d, &c*  or by their incident vertices:
+  - In undirected graphs $uv$.
+  - In directed graphs (u, v) - u is the tail, v is the head.
+  - Directed edges are also called *arcs*
+
+#### Graphs as Data Structures
+
+As an abstract data structure, a graph needs to support a lot of basic operations:
+
+- `addVertex(Vertex v) ` 
+- `removeVertex(Vertex v)`
+- `addEdge(Vertex u, Vertex v)`
+- `removeEdge(Vertex u, Vertex v)`
+- `adjacent(Vertex u, Vertex v)`
+- `degree(Vertex u)`
+- return the vertices in  the graph
+- return the edges incident to a vertex
+- return the vertices adjacent to a vertex
+
+As well as the normal things needed for a usable implementation in a given language (constructors, &c.). Some operations may depend on the exact implementation.
+
+**Adjacency Matrix**
+
+- Simplest form: Edges are stored as a two-dimensional matrix (e.g. )
+
+
+
+### Lecture 06 - Binary Trees and Binary Search Trees
+
+### Lecture 07 - Heaps

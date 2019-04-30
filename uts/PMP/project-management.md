@@ -9,7 +9,7 @@ A Project is a temporary endeavour undertaken to accomplish a unique purpose. Pr
 Why Project Management? Without careful planning sometimes things just go wrong.
 
 - Australian Parliament House \$220m to 1100m; 5 months late
-- Sydney Opera House $7m\;to ​$ 103m, 10 years late
+- Sydney Opera House $7m\;to $ 103m, 10 years late
 - NSW GovtTcard$35m to $100m; 10 years late, cancel
 
 **Are project management success and project success the same things?**
@@ -274,7 +274,7 @@ _Is stakeholder engagement the same as stakeholder management?_
 
 **IT as a Professions** :
 
-> Experts in a field, which provides them an advantage over the lay person and that prefessional's work has the potential to impact the general public at large.
+> Experts in a field, which provides them an advantage over the lay person and that professional's work has the potential to impact the general public at large.
 
 **Professional Code of Ethics**
 
@@ -284,7 +284,7 @@ _Is stakeholder engagement the same as stakeholder management?_
 4. Inspire good conduct
 5. Educate members
 6. Discipline members
-7. FOster external relations
+7. Foster external relations
 8. Detail principles
 9. Express ideals
 10. Put forth rules
@@ -307,17 +307,45 @@ _Is stakeholder engagement the same as stakeholder management?_
 
 ![How our decision auto pilot works](ethics.png)
 
-**Ethical Principles**
+**Ethical Principles** : 
 
-| View                      | Description                                                                                                                         |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Deontology                | Right and wrong is dependent on meeting a duty and independent of consequences                                                      |
-| Consequentialism          | Right/wrong determined by comparative assessment of each act’s consequences (inc _Utilitarianism_ – greatest good, greatest number) |
-| Relativism                | There is no single ethical truth, everything is contingency-based (whatever a culture thinks is right or wrong for its member)      |
-| Universalism (absolutism) | There is a single thruth - implies a single perspective as to what is right and wrong                                               |
-| Virtue ethics             | Focuses on the person who acts - and character traits of the actor as expressed by their actions.                                   |
-| Justice ethics            | Duty to treat all parties faily and to distribute risks and benefits equitably (and following rules derived from these principles)  |
-| Ethical pluralism         | Society comprises diverse pressure groups with divergent social interests. Stakeholder conflict is normal/accepted.                 |
+1. Deontology: Deontology is an ethical theory that uses rules to distinguish right from wrong. Deontology is often associated with philosopher Immanuel Kant. Kant believed that ethical actions follow universal moral laws, such as “Don’t lie.  Don’t steal.  Don’t cheat.” Deontology is simple to apply. It just requires that people follow the rules and do their duty. This approach tends to fit well with our natural intuition about what is or isn’t ethical. Unlike consequentialism, which judges actions by their results, deontology doesn’t require weighing the costs and benefits of a situation. This avoids subjectivity and uncertainty because you only have to follow set rules. Despite its strengths, rigidly following deontology can produce results that many people find unacceptable. For example, suppose you’re a software engineer and learn that a nuclear missile is about to launch that might start a war. You can hack the network and cancel the launch, but it’s against your professional code of ethics to break into any software system without permission. And, it’s a form of lying and cheating. Deontology advises not to violate this rule. However, in letting the missile launch, thousands of people will die. So, following the rules makes deontology easy to apply. But it also means disregarding the possible consequences of our actions when determining what is right and what is wrong.
+
+2. Consequentialism: Consequentialism is an ethical theory that judges whether or not something is right by what its consequences are. For instance, most people would agree that lying is wrong. But if telling a lie would help save a person’s life, consequentialism says it’s the right thing to do. Two examples of consequentialism are utilitarianism and hedonism. Utilitarianism judges consequences by a “greatest good for the greatest number” standard. Hedonism, on the other hand, says something is “good” if the consequence produces pleasure or avoids pain. Consequentialism is sometimes criticized because it can be difficult, or even impossible, to know what the result of an action will be ahead of time. Indeed, no one can know the future with certainty. Also, in certain situations, consequentialism can lead to decisions that are objectionable, even though the consequences are arguably good. For example, let’s suppose economists could prove that the world economy would be stronger, and that most people would be happier, healthier, and wealthier, if we just enslaved 2% of the population. Although the majority of people would benefit from this idea, most would never agree to it. However, when judging the idea solely on its results, as classic consequentialism does, then “the end justifies the means.”
+
+3. Relativism: Moral relativism is the idea that there is no universal or absolute set of moral principles. It’s a version of morality that advocates “to each her own,” and those who follow it say, “Who am I to judge?” Moral relativism can be understood in several ways. Descriptive moral relativism, also known as cultural relativism, says that moral standards are culturally defined, which is generally true. Indeed, there may be a few values that seem nearly universal, such as honesty and respect, but many differences appear across cultures when people evaluate moral standards around the world. Meta-ethical moral relativism states that there are no objective grounds for preferring the moral values of one culture over another. Societies make their moral choices based on their unique beliefs, customs, and practices. And, in fact, people tend to believe that the “right” moral values are the values that exist in their own culture. Normative moral relativism is the idea that all societies should accept each other’s differing moral values, given that there are no universal moral principles. Most philosophers disagree however. For example, just because bribery is okay in some cultures doesn’t mean that other cultures cannot rightfully condemn it. Moral relativism is on the opposite end of the continuum from moral absolutism, which says that there is always one right answer to any ethical question. Indeed, those who adhere to moral relativism would say, “When in Rome, do as the Romans do.”
+
+4. Universalism: Moral absolutism asserts that there are certain universal moral principles by which all peoples’ actions may be judged. It is a form of deontology. The challenge with moral absolutism, however, is that there will always be strong disagreements about which moral principles are correct and which are incorrect. For example, most people around the world probably accept the idea that we should treat others as we wish to be treated ourselves. But beyond that, people from different countries likely hold varying views about everything from the morality of abortion and capital punishment to nepotism and bribery. Moral absolutism contrasts with moral relativism, which denies that there are absolute moral values. It also differs from moral pluralism, which urges tolerance of others’ moral principles without concluding that all views are equally valid. So, while moral absolutism declares a universal set of moral values, in reality, moral principles vary greatly among nations, cultures, and religions.
+
+5. Virtue Ethics: Virtue ethics is a philosophy developed by Aristotle and other ancient Greeks. It is the quest to understand and live a life of moral character. This character-based approach to morality assumes that we acquire virtue through practice. By practicing being honest, brave, just, generous, and so on, a person develops an honourable and moral character. According to Aristotle, by honing virtuous habits, people will likely make the right choice when faced with ethical challenges. To illustrate the difference among three key moral philosophies, ethicists Mark White and Robert Arp refer to the film *The Dark Knight* where Batman has the opportunity to kill the Joker. Utilitarian's, White and Arp suggest, would endorse killing the Joker. By taking this one life, Batman could save multitudes. Deontologists, on the other hand, would reject killing the Joker simply because it’s wrong to kill. But a virtue ethicist “would highlight the character of the person who kills the Joker. Does Batman want to be the kind of person who takes his enemies’ lives?” No, in fact, he doesn’t. So, virtue ethics helps us understand what it means to be a virtuous human being. And, it gives us a guide for living life without giving us specific rules for resolving ethical dilemmas.
+
+6. Justice Ethics: Justice, for many people, refers to fairness. But while justice is important to almost everyone, it means different things to different groups. 
+
+   - For instance, social justice is the notion that everyone deserves equal economic, political, and social opportunities irrespective of race, gender, or religion. 
+
+   - Distributive justice refers to the equitable allocation of assets in society. 
+
+   - Environmental justice is the fair treatment of all people with regard to environmental burdens and benefits. 
+
+   - Restorative or corrective justice seeks to make whole those who have suffered unfairly. 
+
+   - Retributive justice seeks to punish wrongdoers objectively and proportionately. 
+
+   - And procedural justice refers to implementing legal decisions in accordance with fair and unbiased processes. 
+
+     Justice is one of the most important moral values in the spheres of law and politics. Legal and political systems that maintain law and order are desirable, but they cannot accomplish either unless they also achieve justice.
+
+7. Ethical Pluralism: Moral pluralism is the idea that there can be conflicting moral views that are each worthy of respect. Moral pluralists tend to be open-minded when faced with competing viewpoints. They analyze issues from several moral points of view before deciding and taking action. Moral pluralists believe that many moral issues are extremely complicated. Thus, no single philosophical approach will always provide all the answers. For example, assume a building is on fire. A woman has the opportunity to rush inside and save the children trapped in the burning building. But in doing this she may die, and leave her own child an orphan. A moral pluralist would conclude that there is no definitive way to decide which is the better course of moral action. Indeed, moral pluralism declares that it is sometimes difficult to choose between competing values. So, moral pluralism occupies a sensible middle ground between “there is only one right answer”  as moral absolutism says, and “there is no wrong answer” as moral relativism claims.
+
+| View                      | Description                                                  |
+| ------------------------- | ------------------------------------------------------------ |
+| Deontology                | Rpight and wrong is dependent on meeting a duty and independent of consequences. Right or wrong under a series of rules, rather than based on the consequences of the action. |
+| Consequentialism          | Right/wrong determined by comparative assessment of each act’s consequences (inc _Utilitarianism_ – greatest good, greatest number) Consequentialism is an ethical theory that judges whether or not something is right by what its consequences are. |
+| Relativism                | There is no single ethical truth, everything is contingency-based (whatever a culture thinks is right or wrong for its member) |
+| Universalism (absolutism) | There is a single thruth - implies a single perspective as to what is right and wrong |
+| Virtue ethics             | Focuses on the person who acts - and character traits of the actor as expressed by their actions. |
+| Justice ethics            | Duty to treat all parties faily and to distribute risks and benefits equitably (and following rules derived from these principles) |
+| Ethical pluralism         | Society comprises diverse pressure groups with divergent social interests. Stakeholder conflict is normal/accepted. |
 
 Projects have consequences:
 
@@ -338,7 +366,8 @@ Ethical views are founded in individual belief, tend to be deeply held and do no
 - Phoney estimating (not willing to show reasoning)
 - Violating confidentiality
 - Misinformation, disinformation, falsification and misreporting
-- Never willing to stop or put a project on hold•Exaggerating expertise, overselling and low-balling
+- Never willing to stop or put a project on hold
+- Exaggerating expertise, overselling and low-balling
 - Personal interactions/benefits and/or conflicts-of-interest
 - Blended billing rates and financial reporting
 - Inappropriate mark-up on subcontractors
