@@ -582,15 +582,15 @@ We will be put in ethical situations so we need to be able to analyse and decide
 
      - Interviews, workshops, focus groups, observation to create requirements traceability matrix
 
-       ​						*Stakeholder Matrix*
+       ​			*Stakeholder Matrix*
 
        | Stakeholder   | Interest              | Influence | Role               | Objective                 | Strategy                        |
        | ------------- | --------------------- | --------- | ------------------ | ------------------------- | ------------------------------- |
        | Sales Manager | Maximise ticket sales | High      | Steering Committee | Event Profit over $100000 | Involve in online ticket system |
 
-       ​								$\downarrow$
+       ​		        $ \downarrow $
 
-       ​						*Traceability Matrix*
+       ​			*Traceability Matrix*
 
        | Req No. |       Name       | Category | Source                              | Status                        |
        | ------- | :--------------: | -------- | ----------------------------------- | ----------------------------- |
@@ -665,7 +665,8 @@ We will be put in ethical situations so we need to be able to analyse and decide
   9. Explain why having a Requirements Traceability Matrix is useful.
   10. Explain what is meant by ‘task decomposition’ in regard to projects.
 
-  ## Week 4
+
+## Week 4
 
 #### Module 05 - Project Approaches and System Development Methods
 
@@ -855,7 +856,62 @@ Project Life Cycle (PLC) is about project delivery. Systems Development Life Cyc
 
 
 
+#### Module 06 - Planning and Risk Management
 
+Common saying : If you fail to plan, you plan to fail. What get measured gets managed. The purpose of project planning is to guide project execution.
+
+Things seldom go to plan and a project must adapt to its environment. Unexpected events happen. Assumptions and estimates may be wrong. 
+
+**Risk** : An uncertain event or condition that if it occurs, has a positive or negative impact on the project objectives (PMBOK, USA). A risk is something that may or may not happen. If it does happen, then it is likely to jeopardise the success of the project (Hughes and Cotterell, 2009).
+
+**Risk Management** : An organised means of identifying and measuring risk and developing, selecting and managing options for handling those risks (Kerzner, 2004). 
+
+**Risk Management Planning** : 
+
+- Identifying, analysing and developing strategies for responding to risks efficiently and effectively.
+- Providing a warning system for impending or potential problems that need to be addressed or resolved.
+- Decreasing probability / impact of undesirable events.
+- Risk Management is about managing uncertainty.
+
+![1559409938767](/home/sharad/UTS/notes/uts/PMP/project-management.assets/1559409938767.png)
+
+1. Risk Planning
+2. Risk Identification
+3. Risk Assesment
+4. Risk Strategies
+5. Risk Monitoring and Control
+6. Risk Response
+7. Risk Evaluation
+
+**Project Management (Integration) Plan**: Integrates all the key knowledge areas of the project. [Baseline for project measurement and control (scope, time, cost). Includes organisation, team contracts, processes, work to be performed, resources needed, risk and schedule information, etc.]
+
+Is detailed, tailored to a project, dynamic and subject to change. Includes a _project plan_ (tasks to be executed to complete project deliverable - often noted on Gantt chart and Network Dependency Diagram). A Project Management Plan and the Project Plan are not the same thing!
+
+### Questions and Answers
+
+1. What does a project integration plan do?
+2. How does a project plan differ from a project management plan?
+3. Give 3 elements likely to be included in a scope management plan.
+4. Create a work breakdown structure for writing a university assignment
+5. Define what is meant by "project risk". 
+6. Risk management planning has 7 elements.  The first 2 are „risk planning‟ and „risk identification‟. Name and briefly describe 2 others.
+7. Draw up a sample risk register clearly naming all required columns of the table.
+8. Name the 4 types of risk response strategies.
+9. Of the 4 types of risk response strategies, briefly explain one.
+
+
+
+#### Module 07 - Time Management (Activity Sequencing and Estimating)
+
+
+
+#### Module 08 - Costing and Resourcing
+
+#### Module 09 - Quality Management 
+
+#### Module 10 - Project Control and Change Management
+
+#### Module 11 - HR, Procurement and Project Closure
 
 
 
